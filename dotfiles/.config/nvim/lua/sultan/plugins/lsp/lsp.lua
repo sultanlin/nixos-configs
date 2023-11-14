@@ -116,7 +116,7 @@ return {
                     enable_roslyn_analyzers = (servers[server_name] or {}).enable_roslyn_analyzers,
                     analyze_open_documents_only = (servers[server_name] or {}).analyze_open_documents_only,
                     enable_import_completion = (servers[server_name] or {}).enable_import_completion,
-                },
+                }
             end,
         })
 
