@@ -24,6 +24,7 @@ return {
   { "cocopon/iceberg.vim",    event = "VeryLazy" },
   { "bluz71/vim-nightfly-guicolors",    event = "VeryLazy" },
   { "sainnhe/everforest",    event = "VeryLazy" },
+  { "sainnhe/gruvbox-material",    event = "VeryLazy" },
 
 
 
