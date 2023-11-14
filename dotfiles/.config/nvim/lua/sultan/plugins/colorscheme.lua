@@ -15,7 +15,7 @@ return {
   { "catppuccin/nvim",          name = "catppuccin", event = "VeryLazy" },
   { "EdenEast/nightfox.nvim", event = "VeryLazy" },
   { "folke/tokyonight.nvim",    event = "VeryLazy" },
-  { "sonph/onehalf/vim",    event = "VeryLazy" },
+  -- { "sonph/onehalf/vim",    event = "VeryLazy" },
   { "ellisonleao/gruvbox.nvim", event = "VeryLazy" },
   { "rebelot/kanagawa.nvim",    event = "VeryLazy" },
   { "navarasu/onedark.nvim",    event = "VeryLazy" },
