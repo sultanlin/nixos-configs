@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {import = "sultan.plugins"}, 
-  {"sultan.plugins.lsp"},
+  {import = "sultan.plugins.lsp"},
 -- }, {
 --     install = {
 --       colorscheme = "carbonfox",
