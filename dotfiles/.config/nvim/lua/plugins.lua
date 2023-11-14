@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- require("lazy").setup({{import = "sultan.plugins"}, {"sultan.plugins.lsp"}})
-require("lazy").setup("pluginlist")
+require("lazy").setup({{import = "sultan.plugins"}, {"sultan.plugins.lsp"}})
+-- require("lazy").setup("pluginlist")
 
 -- vim.keymap.set("n", "<leader>/l", "<cmd>:Lazy<cr>")
