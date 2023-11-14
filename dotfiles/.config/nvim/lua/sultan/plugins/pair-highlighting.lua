@@ -1,7 +1,7 @@
 -- File:                `nvim/lua/plugins/pair-highlighting.lua`
 -- Purpose:             `lazy.nvim` Plugin Specification    ( Pair Highlighting )
 
--- return {
+return {
     {   -- Highlight Surrounding Parentheses                ( STATE: Okay, with some issues. )
         --  - Only handles highlighting. (I think)
         --  - At least okay performance. Much better feeling than `matchparen` or `matchup`.

@@ -180,8 +180,8 @@
           "FiraCode"
           "JetBrainsMono"
           "Iosevka"
-	  "SourceCodePro" 
-	  "Hack"
+	        "SourceCodePro" 
+	        "Hack"
         ];
       })
 
