@@ -33,8 +33,8 @@ return {
                 },
             },
             omnisharp = {
-                filetypes = { "cs", "vb" },
-                root_dir = require('lspconfig').util.root_pattern("*.csproj", "*.sln"),
+                -- filetypes = { "cs", "vb" },
+                -- root_dir = require('lspconfig').util.root_pattern("*.csproj", "*.sln"),
                 enable_roslyn_analyzers = true,
                 -- analyze_open_documents_only = true,
                 -- enable_import_completion = true,
