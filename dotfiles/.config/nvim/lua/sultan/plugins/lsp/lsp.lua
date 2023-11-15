@@ -5,6 +5,7 @@ return {
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -39,6 +40,14 @@ return {
                 enable_import_completion = true,
 
             },
+            tsserver = {},
+            html = {},
+            cssls = {},
+            tailwindcss = {},
+            svelte = {},
+            graphql = {},
+            prismals = {},
+            emmet_ls = {},
         }
 
 
@@ -82,8 +91,12 @@ return {
         -- Lua LSP
         require('neodev').setup()
 
+        local mason = require("mason")
+        local mason_lspconfig = require "mason-lspconfig"
+        local mason_tool_installer = require("mason-tool-installer")
+
         -- mason
-        require("mason").setup({ 
+        mason.setup({ 
             ensure_installed = servers,  
             automatic_installation = true,
             ui = {
@@ -94,8 +107,6 @@ return {
                 },
             },
         })
-
-        local mason_lspconfig = require "mason-lspconfig"
 
         mason_lspconfig.setup{
             ensure_installed = vim.tbl_keys(servers),
@@ -118,6 +129,17 @@ return {
                     enable_import_completion = (servers[server_name] or {}).enable_import_completion,
                 }
             end,
+        })
+
+        mason_tool_installer.setup({
+            ensure_installed = {
+                "prettier", -- prettier formatter
+                "stylua", -- lua formatter
+                "isort", -- python formatter
+                "black", -- python formatter
+                "pylint", -- python linter
+                "eslint_d", -- js linter
+            },
         })
     end,
 }
