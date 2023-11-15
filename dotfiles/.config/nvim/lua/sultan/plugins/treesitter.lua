@@ -52,6 +52,7 @@ return {
           "scala",
           "sql",
           "terraform",
+          "c_sharp",
         },
         incremental_selection = {
           enable = true,
