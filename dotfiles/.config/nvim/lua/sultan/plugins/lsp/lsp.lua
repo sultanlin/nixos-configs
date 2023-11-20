@@ -76,7 +76,7 @@ return {
 
         bufmap('<leader>wa', vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd folder")
         bufmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove folder")
-        bufmap('<leader>wr', function() 
+        bufmap('<leader>wl', function() 
             print(vim.inspect(vim.lsp.buf.list_workspace_folder()))
         end, "[W]orkspace [L]ist folder")
 
