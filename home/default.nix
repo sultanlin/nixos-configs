@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./desktop
+    # ./desktop
+    ./app
     # ./hyprland/hyprland.nix
   ];
 
