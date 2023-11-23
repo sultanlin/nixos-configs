@@ -14,12 +14,13 @@
     #"astronvim/lua/user".source = ./astronvim_user;
   #};
 
-  home.file.".config/nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink ./nvim;
+  #home.file.".config/nvim" = {
+    #source = config.lib.file.mkOutOfStoreSymlink ./nvim;
     # source = ../../dotfiles/.config/nvim;
     # source = /home/sultan/dotfiles/.config/nvim;
-    recursive = true;
-  };
+    #recursive = true;
+  #};
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./nvim;
 
   nixpkgs.config = {
     programs.npm.npmrc = ''
