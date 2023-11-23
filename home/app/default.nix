@@ -11,7 +11,8 @@
     ./btop.nix
     ./git.nix
     ./media.nix
-    ./neovim.nix
+    # ./neovim.nix
+    ./neovim
     #./shell
     ./starship.nix
     ./terminal
