@@ -56,8 +56,8 @@
           	#	require("plugins.theme")
         	#'';
 	#}
-		 gruvbox-nvim;
-		 tokyonight;
+		 gruvbox-nvim
+		 tokyonight
 	#gruvbox-nvim
       ];
     };
