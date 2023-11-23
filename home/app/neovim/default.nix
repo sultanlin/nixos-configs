@@ -78,7 +78,7 @@
         nodePackages.pyright
 
         # Lua
-        unstable.lua-language-server
+        lua-language-server
         selene
 
         # Nix
