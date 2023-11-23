@@ -46,6 +46,7 @@
         # search all the plugins using https://search.nixos.org/packages
 	{
         plugin = gruvbox-nvim;
+	type = "lua";
         config = "colorscheme gruvbox";
 	}
       ];
