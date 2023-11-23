@@ -44,12 +44,12 @@
       # currently we use lazy.nvim as neovim's package manager, so comment this one.
       plugins = with pkgs.vimPlugins; [
         # search all the plugins using https://search.nixos.org/packages
-	#{
-        #plugin = gruvbox-nvim;
-	#type = "lua";
-        #config = "colorscheme gruvbox";
-	#}
-	gruvbox-nvim
+	{
+	plugin = gruvbox-nvim;
+	type = "lua";
+        config = ''colorscheme gruvbox'';
+	}
+	#gruvbox-nvim
       ];
     };
   };
