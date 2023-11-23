@@ -50,6 +50,7 @@
         # search all the plugins using https://search.nixos.org/packages
 	{
 		plugin = gruvbox-nvim;
+		plugin = tokyonight;
 		#type = "lua";
         	#config = ''
           	#	require("plugins.theme")
