@@ -52,7 +52,7 @@
 		plugin = gruvbox-nvim;
 		type = "lua";
         	config = ''
-          		require("config.theme")
+          		require("plugins.theme")
         	'';
 	}
 	#gruvbox-nvim
