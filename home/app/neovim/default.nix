@@ -57,7 +57,7 @@
         	#'';
 	#}
 		 gruvbox-nvim
-		 tokyonight
+		 tokyonight-nvim
 	#gruvbox-nvim
       ];
     };
