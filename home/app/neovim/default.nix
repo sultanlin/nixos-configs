@@ -29,6 +29,10 @@
 
   programs = {
     neovim = {
+      let
+        toLua = str: "lua << EOF\n${str}\nEOF\n";
+        toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+      in
       enable = true;
       defaultEditor = true;
 
@@ -45,9 +49,9 @@
       plugins = with pkgs.vimPlugins; [
         # search all the plugins using https://search.nixos.org/packages
 	{
-	plugin = gruvbox-nvim;
-	type = "lua";
-        config = ''colorscheme gruvbox'';
+		plugin = gruvbox-nvim;
+		#type = "lua";
+        	config = "colorscheme gruvbox";
 	}
 	#gruvbox-nvim
       ];
