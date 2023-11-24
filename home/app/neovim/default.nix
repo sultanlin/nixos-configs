@@ -62,7 +62,7 @@
 	#gruvbox-nvim
 	nvim-treesitter.withAllGrammars
 	nvim-treesitter-textobjects
-	telescope
+	telescope-nvim
 	nvim-lspconfig
 	nvim-cmp
 	     cmp-path
