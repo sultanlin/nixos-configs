@@ -75,17 +75,16 @@
       friendly-snippets
       lspkind-nvim
       null-ls-nvim
-      plenary
+      plenary-nvim
       nvim-web-devicons
       which-key
-      Comment
-      vim-surround
-      gitsigns
-      indent-blankline
-      lualine
-      dressing
-
-      refactoring
+      comment-nvim
+      nvim-surround
+      gitsigns-nvim
+      indent-blankline-nvim
+      lualine-nvim
+      dressing-nvim
+      refactoring-nvim
       ];
     };
   };
@@ -159,5 +158,9 @@
         gitlint
         terraform-ls
         actionlint
+
+	# Clipboard
+	xclip
+	wl-clipboard
       ];
 }
