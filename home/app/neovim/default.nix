@@ -60,6 +60,32 @@
 		 gruvbox-nvim
 		 tokyonight-nvim
 	#gruvbox-nvim
+	nvim-treesitter.withAllGrammars
+	nvim-treesitter-textobjects
+	telescope
+	nvim-lspconfig
+	nvim-cmp
+	     cmp-path
+      cmp-buffer
+      cmp-nvim-lsp
+      cmp-nvim-lua
+      cmp_luasnip
+      nvim-autopairs
+      LuaSnip
+      friendly-snippets
+      lspkind-nvim
+      null-ls
+      plenary
+      nvim-web-devicons
+      which-key
+      Comment
+      vim-surround
+      gitsigns
+      indent-blankline
+      lualine
+      dressing
+
+      refactoring
       ];
     };
   };

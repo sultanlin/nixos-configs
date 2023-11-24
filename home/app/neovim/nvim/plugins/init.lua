@@ -1,0 +1,13 @@
+require("plugins.autopairs")
+require("plugins.bufferline")
+require("plugins.comment")
+require("plugins.completion")
+require("plugins.harpoon")
+require("plugins.lualine")
+require("plugins.telescope")
+require("plugins.treesitter-text-objects")
+require("plugins.which-key")
+require("plugins.treesitter")
+require("plugins.theme")
+require("plugins.")
+
