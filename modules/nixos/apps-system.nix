@@ -7,7 +7,9 @@
     pam.services.greetd.enableGnomeKeyring = true;
   };
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
+
+  users.defaultUserShell = pkgs.zsh;
 
   environment = {
     # Linux shells install
@@ -60,7 +62,7 @@
       git               # Version Control
       git-lfs
       psmisc  		# killall/pstree/prtstat/fuser/...
-      zsh
+      # zsh
 
       # create a fhs environment by command `fhs`, so we can run non-nixos packages in nixos!
       (
@@ -109,4 +111,4 @@
     # Fix shebang issues with FHS
     # envfs.enable = true;
   };
-}
+# }
