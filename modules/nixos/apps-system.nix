@@ -9,7 +9,7 @@
 
   # programs.zsh.enable = true;
 
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
 
   environment = {
     # Linux shells install
