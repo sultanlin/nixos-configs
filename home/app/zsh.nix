@@ -1,9 +1,9 @@
 { pkgs, username, ... }:
 
 {
-  home.users.${username} = {
-   shell = pkgs.zsh;
-  };
+  # home.users.${username} = {
+  #  shell = pkgs.zsh;
+  # };
 
   programs = {
     zsh = {
