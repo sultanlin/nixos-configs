@@ -74,7 +74,7 @@
       luasnip
       friendly-snippets
       lspkind-nvim
-      null-ls
+      null-ls-nvim
       plenary
       nvim-web-devicons
       which-key
