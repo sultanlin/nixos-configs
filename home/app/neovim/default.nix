@@ -71,7 +71,7 @@
       cmp-nvim-lua
       cmp_luasnip
       nvim-autopairs
-      LuaSnip
+      luasnip
       friendly-snippets
       lspkind-nvim
       null-ls
