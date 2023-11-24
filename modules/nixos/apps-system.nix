@@ -7,9 +7,9 @@
     pam.services.greetd.enableGnomeKeyring = true;
   };
 
-  # programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
-  # users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
 
   environment = {
     # Linux shells install
