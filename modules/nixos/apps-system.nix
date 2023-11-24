@@ -111,4 +111,4 @@
     # Fix shebang issues with FHS
     # envfs.enable = true;
   };
-# }
+}
