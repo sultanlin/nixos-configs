@@ -77,7 +77,7 @@
       null-ls-nvim
       plenary-nvim
       nvim-web-devicons
-      which-key
+      which-key-nvim
       comment-nvim
       nvim-surround
       gitsigns-nvim
