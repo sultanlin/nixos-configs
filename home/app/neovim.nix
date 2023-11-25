@@ -11,9 +11,8 @@
 #e#############################################################################
 {
   let
-    configPath = builtins.toString ../../dotfiles/.config/nvim;
+  configPath = builtins.toString ../../dotfiles/.config/nvim;
   in
-  {
   #xdg.configFile = {
     # astronvim's config
     #"nvim".source = astronvim;
@@ -78,6 +77,5 @@
         fd
         go
       ];
-  };
   };
 }
