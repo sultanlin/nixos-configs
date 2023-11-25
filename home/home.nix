@@ -1,6 +1,7 @@
 { config, pkgs, username, ... }:
 
 {
+  xdg.userDirs.enable = true;
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
 
