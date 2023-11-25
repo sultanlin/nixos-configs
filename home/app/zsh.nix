@@ -35,9 +35,9 @@
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
         # # zsh autopair
-        source ${pkgs.zsh-autopair}/autopair.zsh
+        # source ${pkgs.zsh-autopair}/autopair.zsh
         # source ~/.zsh-autopair/autopair.zsh
-        autopair-init
+        # autopair-init
       '';
     };
   };
