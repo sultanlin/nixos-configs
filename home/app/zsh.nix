@@ -45,13 +45,19 @@
     #   zsh
     #   nix-zsh-completions
     #   bat
-      exa
+      # exa
     #   fasd
     #   fd
     #   fzf
     #   jq
     #   ripgrep
     #   tldr
+    ];
+    home.packages = with pkgs; [
+      # Automatically trims your branches whose tracking remote refs are merged or gone
+      # It's really useful when you work on a project for a long time.
+      # git-trim
+      exa
     ];
     #
     # env = {
