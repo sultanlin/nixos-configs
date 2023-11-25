@@ -10,6 +10,10 @@
 #
 #e#############################################################################
 {
+  let
+    configPath = builtins.toString ../../dotfiles/.config/nvim;
+  in
+  {
   #xdg.configFile = {
     # astronvim's config
     #"nvim".source = astronvim;
@@ -49,7 +53,7 @@
     file."nvim" = {
       # source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
       # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
-      source = config.lib.file.mkOutOfStoreSymlink builtins.toString ../../dotfiles/.config/nvim;
+      source = config.lib.file.mkOutOfStoreSymlink configPath;
       # current_dir = builtins.toString ../../dotfiles/.config/nvim;
       # ./nvim;
       # source = ../../dotfiles/.config/nvim;
@@ -74,5 +78,6 @@
         fd
         go
       ];
+  };
   };
 }
