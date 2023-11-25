@@ -35,24 +35,16 @@
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
         # # zsh autopair
-        # source ${pkgs.zsh-vi-mode}/autopair.zsh
+        source ${pkgs.zsh-autopair}/autopair.zsh
         # source ~/.zsh-autopair/autopair.zsh
-        # autopair-init
+        autopair-init
       '';
     };
-
-    #
-    # env = {
-    #   ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
-    #   ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
-    #   ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
-    # };
   };
   home.packages = with pkgs; [
     zsh
     nix-zsh-completions
     bat
-    eza
     fasd
     fd
     fzf
