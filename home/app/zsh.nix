@@ -47,7 +47,7 @@
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
-      ''  
+      '';  
     };
   };
   home.packages = with pkgs; [
