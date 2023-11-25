@@ -1,8 +1,6 @@
 { pkgs, username, ... }:
 
 {
-  # home.users.${username}.shell = pkgs.zsh;
-
   programs = {
     zsh = {
       enable = true;
@@ -19,6 +17,14 @@
 		      expireDuplicatesFirst = true;
 	    };
 
+      dirHashes = {
+        docs = "$(xdg-user-dir DOCUMENTS)";
+        dl = "$(xdg-user-dir DOWNLOAD)";
+        pics = "$(xdg-user-dir PICTURES)";
+        vids = "$(xdg-user-dir VIDEOS)";
+      };
+
+      dotDir = ".config/zsh";
 
       #shellInit = ''
       #  # Spaceship

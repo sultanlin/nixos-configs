@@ -28,12 +28,6 @@
 
       dotDir = ".config/zsh";
 
-      # shellAliases = {
-      #   la = "ls -a";
-      #   ll = "ls -l";
-      #   lla = "ls -al";
-      # };
-
       #shellInit = ''
       #  # Spaceship
       #  source ${pkgs.spaceship-prompt}/share/zsh/site-functions/prompt_spaceship_setup
@@ -48,11 +42,20 @@
         # zsh vi mode install
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-        # zsh autopair
-        source ${pkgs.zsh-vi-mode}/autopair.zsh
-        source ~/.zsh-autopair/autopair.zsh
+        # # zsh autopair
+        source ${pkgs.zsh-autopair}/share/zsh-autopair/autopair.zsh
+        # source ~/.zsh-autopair/autopair.zsh
         autopair-init
       '';
+
+      completionInit = ''
+        # Basic auto/tab complete:
+        autoload -U compinit
+        zstyle ':completion:*' menu select
+        zmodload zsh/complist
+        compinit
+        _comp_options+=(globdots)		# Include hidden files.
+      '';  
     };
 
     home.packages = with pkgs; [
