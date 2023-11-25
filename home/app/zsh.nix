@@ -41,18 +41,18 @@
       '';
     };
 
-    # user.packages = with pkgs; [
-    #   zsh
-    #   nix-zsh-completions
-    #   bat
-    #   exa
-    #   fasd
-    #   fd
-    #   fzf
-    #   jq
-    #   ripgrep
-    #   tldr
-    # ];
+    home.packages = with pkgs; [
+      zsh
+      nix-zsh-completions
+      bat
+      exa
+      fasd
+      fd
+      fzf
+      jq
+      ripgrep
+      tldr
+    ];
     #
     # env = {
     #   ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
