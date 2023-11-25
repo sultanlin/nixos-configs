@@ -16,7 +16,7 @@
     shells = with pkgs; [
       bash
       nushell
-      zsh
+      # zsh
     ];
     # List packages installed in system profile. To search, run:
     # $ nix search wget
@@ -62,7 +62,6 @@
       git               # Version Control
       git-lfs
       psmisc  		# killall/pstree/prtstat/fuser/...
-      # zsh
 
       # create a fhs environment by command `fhs`, so we can run non-nixos packages in nixos!
       (
