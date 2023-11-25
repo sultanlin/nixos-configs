@@ -9,9 +9,9 @@
 #  AstroNvim's configuration and all its dependencies(lsp, formatter, etc.)
 #
 #e#############################################################################
-let
-  configPath = builtins.toString ../../dotfiles/.config/nvim;
-in
+# let
+#   configPath = builtins.toString ../../dotfiles/.config/nvim;
+# in
 {
   #xdg.configFile = {
     # astronvim's config
@@ -51,8 +51,11 @@ in
   home = {
     file."nvim" = {
       # source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
-      # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
-      source = config.lib.file.mkOutOfStoreSymlink (builtins.toString ../../dotfiles/.config/nvim) ; # configPath;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
+      # source = config.lib.file.mkOutOfStoreSymlink (builtins.toString ../../dotfiles/.config/nvim) ; # configPath;
+
+# "/home/sultan/nixos-config/dotfiles/.config/nvim"
+# error: the expression selected by the selection path '../../dotfiles/.config/nvim' should be a set but is the built-in function 'toString'
       # current_dir = builtins.toString ../../dotfiles/.config/nvim;
       # ./nvim;
       # source = ../../dotfiles/.config/nvim;
