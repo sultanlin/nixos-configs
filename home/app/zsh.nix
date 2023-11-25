@@ -20,11 +20,6 @@
 	    };
 
 
-      #ohMyZsh = {                               # Plug-ins
-      #  enable = true;
-      #  plugins = [ "git" ];
-      #};
-
       #shellInit = ''
       #  # Spaceship
       #  source ${pkgs.spaceship-prompt}/share/zsh/site-functions/prompt_spaceship_setup
@@ -34,6 +29,11 @@
 
       #  #eval "$(direnv hook zsh)"
       #'';                                       # Theming
+
+      initExtra = ''
+        # zsh vi mode install
+        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+      ''
     };
   };
 }
