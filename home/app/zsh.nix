@@ -33,7 +33,7 @@
       initExtra = ''
         # zsh vi mode install
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-      ''
+      '';
     };
   };
 }
