@@ -19,6 +19,7 @@
     ./tmux.nix
     ./zsh.nix
     ./direnv.nix
+    ./shell/eza.nix
   ];
 
 
