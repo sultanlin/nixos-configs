@@ -46,13 +46,13 @@
     };
   };
   home = {
-
-    file.".config/nvim" = {
+    file."nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
       # ./nvim;
       # source = ../../dotfiles/.config/nvim;
       # source = /home/sultan/dotfiles/.config/nvim;
-      # recursive = true;
+      recursive = true;
+      target = ".config/nvim"
     };
 
     packages = with pkgs;
