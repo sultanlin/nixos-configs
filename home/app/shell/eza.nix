@@ -8,7 +8,7 @@
   ...
 }: {
   programs.eza = {
-    enable - true;
+    enable = true;
     icons = true;
     git = true;
     
