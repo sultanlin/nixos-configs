@@ -41,23 +41,23 @@
       '';
     };
 
-    user.packages = with pkgs; [
-      zsh
-      nix-zsh-completions
-      bat
-      exa
-      fasd
-      fd
-      fzf
-      jq
-      ripgrep
-      tldr
-    ];
+    # user.packages = with pkgs; [
+    #   zsh
+    #   nix-zsh-completions
+    #   bat
+    #   exa
+    #   fasd
+    #   fd
+    #   fzf
+    #   jq
+    #   ripgrep
+    #   tldr
+    # ];
     #
-    # env = {
-    #   ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
-    #   ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
-    #   ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
-    # };
+    env = {
+      ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
+      ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
+      ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
+    };
   };
 }
