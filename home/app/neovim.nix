@@ -9,10 +9,10 @@
 #  AstroNvim's configuration and all its dependencies(lsp, formatter, etc.)
 #
 #e#############################################################################
-{
-  let
+let
   configPath = builtins.toString ../../dotfiles/.config/nvim;
-  in
+in
+{
   #xdg.configFile = {
     # astronvim's config
     #"nvim".source = astronvim;
