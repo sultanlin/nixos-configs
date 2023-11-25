@@ -52,7 +52,7 @@
       # source = ../../dotfiles/.config/nvim;
       # source = /home/sultan/dotfiles/.config/nvim;
       recursive = true;
-      target = ".config/nvim"
+      target = ".config/nvim";
     };
 
     packages = with pkgs;
