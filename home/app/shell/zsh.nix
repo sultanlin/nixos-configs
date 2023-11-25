@@ -19,6 +19,20 @@
 		      expireDuplicatesFirst = true;
 	    };
 
+      dirHashes = {
+        docs = "$(xdg-user-dir DOCUMENTS)";
+        dl = "$(xdg-user-dir DOWNLOAD)";
+        pics = "$(xdg-user-dir PICTURES)";
+        vids = "$(xdg-user-dir VIDEOS)";
+      };
+
+      dotDir = ".config/zsh";
+
+      # shellAliases = {
+      #   la = "ls -a";
+      #   ll = "ls -l";
+      #   lla = "ls -al";
+      # };
 
       #shellInit = ''
       #  # Spaceship
@@ -34,30 +48,30 @@
         # zsh vi mode install
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-        # # zsh autopair
-        # source ${pkgs.zsh-vi-mode}/autopair.zsh
-        # source ~/.zsh-autopair/autopair.zsh
-        # autopair-init
+        # zsh autopair
+        source ${pkgs.zsh-vi-mode}/autopair.zsh
+        source ~/.zsh-autopair/autopair.zsh
+        autopair-init
       '';
     };
 
-    # user.packages = with pkgs; [
-    #   zsh
-    #   nix-zsh-completions
-    #   bat
-    #   exa
-    #   fasd
-    #   fd
-    #   fzf
-    #   jq
-    #   ripgrep
-    #   tldr
-    # ];
-    #
-    # env = {
-    #   ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
-    #   ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
-    #   ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
-    # };
+    user.packages = with pkgs; [
+      zsh
+      nix-zsh-completions
+      bat
+      exa
+      fasd
+      fd
+      fzf
+      jq
+      ripgrep
+      tldr
+    ];
+
+    env = {
+      ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
+      ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
+      ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
+    };
   };
 }
