@@ -36,6 +36,14 @@
       #  #eval "$(direnv hook zsh)"
       #'';                                       # Theming
 
+      # shellAliases = {
+        #   ne = "nix-env";
+        #   ni = "nix-env -iA";
+        #   no = "nixops";
+        #   ns = "nix-shell --pure";
+        #   please = "sudo";
+        # };
+
       initExtra = ''
         # zsh vi mode install
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -44,6 +52,10 @@
         source ${pkgs.zsh-autopair}/share/zsh-autopair/autopair.zsh
         # source ~/.zsh-autopair/autopair.zsh
         autopair-init
+
+        # powerlevel10k
+        source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+        test -f ~/.config/zsh/.p10k.zsh && source ~/.config/zsh/.p10k.zsh
       '';
 
       completionInit = ''
