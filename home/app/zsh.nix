@@ -46,7 +46,7 @@
 
       plugins = [
         pkgs.zsh-autopair
-      ]
+      ];
 
       initExtra = ''
         # zsh vi mode install
