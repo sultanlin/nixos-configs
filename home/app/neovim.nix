@@ -51,8 +51,8 @@ in
   home = {
     file."nvim" = {
       # source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
-      # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
-      source = config.lib.file.mkOutOfStoreSymlink configPath;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
+      # source = config.lib.file.mkOutOfStoreSymlink configPath;
       # source = config.lib.file.mkOutOfStoreSymlink (builtins.toString ../../dotfiles/.config/nvim) ; # configPath;
 
       # current_dir = builtins.toString ../../dotfiles/.config/nvim;
