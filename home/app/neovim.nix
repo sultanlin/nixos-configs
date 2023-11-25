@@ -47,7 +47,8 @@
   };
   home = {
     file."nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
+      # source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
       # ./nvim;
       # source = ../../dotfiles/.config/nvim;
       # source = /home/sultan/dotfiles/.config/nvim;
