@@ -2,6 +2,7 @@
 
 {
   xdg.userDirs.enable = true;
+  xdg.userDirs.createDirectories = true;
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
 
