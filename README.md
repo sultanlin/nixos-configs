@@ -17,6 +17,7 @@ NixOS Video References
 -- https://www.youtube.com/watch?v=SzyuLVzS5Fg  All Systems Go! - Writing your own NixOS modules for fun
 -- https://www.youtube.com/@grok.computer       grok.computer channel
 -- https://www.youtube.com/watch?v=HvPfIiCnm6U  Jonas Chevalier - Using direnv with Nix    
+-- https://www.youtube.com/watch?v=90P-Ml1318U
 
 Github
 
@@ -41,6 +42,9 @@ Github
 -- https://github.com/kbeerta/nixos-config/blob/main/modules/shell/zsh.nix
 -- https://github.com/Fryuni/config-files/blob/main/nix-home/development/rust.nix
 -- https://github.com/wahtique/dotfiles
+- Neovim setup
+-- https://github.com/BirdeeHub/birdeevim
+-- https://github.com/BirdeeHub/nixCats-nvim
 
 Guides / Flakes
 
@@ -75,6 +79,7 @@ Blogs / Books / Guides / Articles etc
 -- https://hugoreeves.com/posts/2019/nix-home/
 -- https://www.tweag.io/blog/2020-05-25-flakes/
 -- https://tech.aufomm.com/my-nixos-journey-home-manager/
+-- https://animeshz.github.io/site/notes/20-29--DevEnvironment/21--Linux/21.02-Nix.html
 
 - Reddit posts
 -- https://www.reddit.com/r/NixOS/comments/qpqnfq/flake_structure_for_multi_system/?rdt=37277
@@ -89,6 +94,8 @@ Blogs / Books / Guides / Articles etc
 -- https://www.reddit.com/r/NixOS/comments/xetk2j/using_home_manager_but_normal_dotfiles/
 -- https://www.reddit.com/r/NixOS/comments/13dxw9d/nixos_nix_flakes_a_guide_for_beginners/
 -- https://www.reddit.com/r/NixOS/comments/1728ypn/got_a_public_repository_of_your_nixnixos/
+-- https://www.reddit.com/r/NixOS/comments/17vfgjc/my_mental_model_of_nix/
 - 2 good idiot guides
 -- https://www.reddit.com/r/NixOS/comments/183mb21/why_there_isnt_a_easy_idiot_guide_for_nixos_yet/
 -- https://www.reddit.com/r/NixOS/comments/zxlv2t/nixos_desktop_new_user_guide/
+
