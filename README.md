@@ -26,6 +26,7 @@ Github
 -- https://github.com/ryan4yin/nix-config      -- Has guide
 
 - Without youtube videos
+-- https://github.com/hlissner/dotfiles     hlissner
 -- https://github.com/Misterio77/nix-colors
 -- https://github.com/Misterio77/nixos-hyprland-example/blob/main/flake.nix
 -- https://github.com/dustinlyons/nixos-config
@@ -37,6 +38,9 @@ Github
 -- https://github.com/mitchellh/nixos-config
 -- https://github.com/the-nix-way/dev-templates/blob/main/shell/flake.nix
 -- https://github.com/hlissner/dotfiles#frequently-asked-questions
+-- https://github.com/kbeerta/nixos-config/blob/main/modules/shell/zsh.nix
+-- https://github.com/Fryuni/config-files/blob/main/nix-home/development/rust.nix
+-- https://github.com/wahtique/dotfiles
 
 Guides / Flakes
 
@@ -70,6 +74,7 @@ Blogs / Books / Guides / Articles etc
 -- https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55        -- Probably useless
 -- https://hugoreeves.com/posts/2019/nix-home/
 -- https://www.tweag.io/blog/2020-05-25-flakes/
+-- https://tech.aufomm.com/my-nixos-journey-home-manager/
 
 - Reddit posts
 -- https://www.reddit.com/r/NixOS/comments/qpqnfq/flake_structure_for_multi_system/?rdt=37277
@@ -83,3 +88,7 @@ Blogs / Books / Guides / Articles etc
 -- https://www.reddit.com/r/NixOS/comments/yp7n12/i_thinking_about_giving_up_on_nixos_change_my/
 -- https://www.reddit.com/r/NixOS/comments/xetk2j/using_home_manager_but_normal_dotfiles/
 -- https://www.reddit.com/r/NixOS/comments/13dxw9d/nixos_nix_flakes_a_guide_for_beginners/
+-- https://www.reddit.com/r/NixOS/comments/1728ypn/got_a_public_repository_of_your_nixnixos/
+- 2 good idiot guides
+-- https://www.reddit.com/r/NixOS/comments/183mb21/why_there_isnt_a_easy_idiot_guide_for_nixos_yet/
+-- https://www.reddit.com/r/NixOS/comments/zxlv2t/nixos_desktop_new_user_guide/
