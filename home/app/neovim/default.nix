@@ -3,7 +3,9 @@
   config,
   ...
 }:
-
+let
+  configPath = builtins.toString ../../dotfiles/.config/nvim;
+in
 {
   #xdg.configFile = {
     # astronvim's config
@@ -20,7 +22,7 @@
     # source = /home/sultan/dotfiles/.config/nvim;
     #recursive = true;
   #};
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./nvim;
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";# ./nvim;
 
   nixpkgs.config = {
     programs.npm.npmrc = ''
@@ -57,15 +59,15 @@
           	#	require("plugins.theme")
         	#'';
 	#}
-		 gruvbox-nvim
-		 tokyonight-nvim
-	#gruvbox-nvim
-	nvim-treesitter.withAllGrammars
-	nvim-treesitter-textobjects
-	telescope-nvim
-	nvim-lspconfig
-	nvim-cmp
-	     cmp-path
+      gruvbox-nvim
+      tokyonight-nvim
+      #gruvbox-nvim
+      nvim-treesitter.withAllGrammars
+      nvim-treesitter-textobjects
+      telescope-nvim
+      nvim-lspconfig
+      nvim-cmp
+      cmp-path
       cmp-buffer
       cmp-nvim-lsp
       cmp-nvim-lua
