@@ -41,7 +41,7 @@
 
 	x64_specialArgs =
           {
-            inherit username userfullname useremail hostname;
+            inherit username userfullname useremail hostname dotfilesConfig;
             # use unstable branch for some packages to get the latest updates
             pkgs-stable = import nixpkgs-stable {
               system = x64_system; # refer the `system` parameter form outer scope recursively
