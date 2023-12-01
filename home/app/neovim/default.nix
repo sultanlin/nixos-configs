@@ -8,9 +8,13 @@ let
 in
 {
   nixpkgs.config = {
-    programs.npm.npmrc = ''
-      prefix = ''${HOME}/.npm-global
-    '';
+    programs.npm = {
+      enable = true;
+      npmrc = ''
+        prefix = ''${HOME}/.npm-global
+        color = true
+      '';
+    };
   };
 
   programs = {
@@ -49,7 +53,9 @@ in
       nvim-treesitter-textobjects
       telescope-nvim
       nvim-lspconfig
-      nvim-cmp
+      {
+        nvim-cmp
+      }
       cmp-path
       cmp-buffer
       cmp-nvim-lsp
