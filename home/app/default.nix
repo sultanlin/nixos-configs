@@ -61,4 +61,5 @@
       recursive = true;
       target = ".config/nvim";
     };
+    };
 }
