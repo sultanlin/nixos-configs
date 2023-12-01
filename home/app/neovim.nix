@@ -24,9 +24,13 @@ in
   #};
 
   nixpkgs.config = {
-    programs.npm.npmrc = ''
-      prefix = ''${HOME}/.npm-global
-    '';
+    programs.npm = {
+      enable = true;
+      npmrc = ''
+        prefix = ''${HOME}/.npm-global
+        color = true
+      '';
+    };
   };
 
   programs = {
