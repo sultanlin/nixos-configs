@@ -55,11 +55,11 @@
   };
 
   
-  home.file = {
-    "nvim" = {
+  home = {
+    file."nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/nvim";
       recursive = true;
       target = ".config/nvim";
     };
-    };
+  };
 }
