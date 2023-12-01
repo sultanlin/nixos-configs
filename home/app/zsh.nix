@@ -8,7 +8,7 @@
       enableAutosuggestions = true;
       enableCompletion = true;
       #histSize = 100000;
-      histSize = 10000;
+      # histSize = 10000;
       # Automatically goes into directory without cd
       autocd = true;
 
