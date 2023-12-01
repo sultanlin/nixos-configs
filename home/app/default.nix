@@ -56,10 +56,10 @@
 
   
   home = {
-    file."nvim" = {
+    file.".config/nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/nvim";
       recursive = true;
-      target = ".config/nvim";
+      # target = ".config/nvim";
     };
   };
 }
