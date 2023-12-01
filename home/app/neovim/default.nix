@@ -7,23 +7,6 @@ let
   configPath = builtins.toString ../../dotfiles/.config/nvim;
 in
 {
-  #xdg.configFile = {
-    # astronvim's config
-    #"nvim".source = astronvim;
-
-    # my custom astronvim config, astronvim will load it after base config
-    # https://github.com/AstroNvim/AstroNvim/blob/v3.32.0/lua/astronvim/bootstrap.lua#L15-L16
-    #"astronvim/lua/user".source = ./astronvim_user;
-  #};
-
-  #home.file.".config/nvim" = {
-    #source = config.lib.file.mkOutOfStoreSymlink ./nvim;
-     #source = ../../dotfiles/.config/nvim;
-    # source = /home/sultan/dotfiles/.config/nvim;
-    #recursive = true;
-  #};
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";# ./nvim;
-
   nixpkgs.config = {
     programs.npm.npmrc = ''
       prefix = ''${HOME}/.npm-global

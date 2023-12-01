@@ -1,4 +1,8 @@
-{pkgs, config, specialArgs, ...}: {
+{pkgs, config, specialArgs, ...}: 
+let
+  dotfilesConfig = specialArgs.dotfilesConfig;
+in 
+{
   imports = [
     #./creative.nix
     #./gtk.nix
@@ -57,7 +61,7 @@
   
   home = {
     file.".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/nvim";
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
       recursive = true;
       # target = ".config/nvim";
     };
