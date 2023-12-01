@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, config, specialArgs, ...}: {
   imports = [
     #./creative.nix
     #./gtk.nix
