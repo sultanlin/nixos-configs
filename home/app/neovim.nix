@@ -10,8 +10,6 @@
 #  Neovim's configuration and all its dependencies(lsp, formatter, etc.)
 #
 #e#############################################################################
-let
-  configPath = builtins.toString ../../dotfiles/.config/nvim;
 in
 {
   nixpkgs.config = {

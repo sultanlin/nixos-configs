@@ -15,8 +15,8 @@ in
     ./btop.nix
     ./git.nix
     ./media.nix
-    ./neovim.nix
-    #./neovim
+    # ./neovim.nix
+    ./neovim
     #./shell
     ./starship.nix
     ./terminal
