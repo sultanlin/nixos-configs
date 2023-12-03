@@ -51,6 +51,7 @@ in
       # plugins = with pkgs.vimPlugins; [
       #   # search all the plugins using https://search.nixos.org/packages
       # ];
+      # currently we use lazy.nvim as neovim's package manager, so comment this one.
     };
   };
   home = {

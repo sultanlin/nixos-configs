@@ -15,8 +15,8 @@ in
     ./btop.nix
     ./git.nix
     ./media.nix
-    ./neovim.nix
-    #./neovim
+    #./neovim.nix
+    ./neovim
     #./shell
     ./starship.nix
     ./terminal
@@ -61,7 +61,8 @@ in
   
   home = {
     file.".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
+      # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       recursive = true;
       # target = ".config/nvim";
     };
