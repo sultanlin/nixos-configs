@@ -53,9 +53,9 @@ in
       nvim-treesitter-textobjects
       telescope-nvim
       nvim-lspconfig
-      {
+      #{
         nvim-cmp
-      }
+      #}
       cmp-path
       cmp-buffer
       cmp-nvim-lsp
