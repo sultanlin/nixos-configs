@@ -7,22 +7,13 @@
 }:
 ###############################################################################
 #
-#  AstroNvim's configuration and all its dependencies(lsp, formatter, etc.)
+#  Neovim's configuration and all its dependencies(lsp, formatter, etc.)
 #
 #e#############################################################################
 let
   configPath = builtins.toString ../../dotfiles/.config/nvim;
 in
 {
-  #xdg.configFile = {
-    # astronvim's config
-    #"nvim".source = astronvim;
-
-    # my custom astronvim config, astronvim will load it after base config
-    # https://github.com/AstroNvim/AstroNvim/blob/v3.32.0/lua/astronvim/bootstrap.lua#L15-L16
-    #"astronvim/lua/user".source = ./astronvim_user;
-  #};
-
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -55,21 +46,6 @@ in
     };
   };
   home = {
-    # file."nvim" = {
-    #   # source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/.config/nvim;
-    #   # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/.config/nvim";
-    #   # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/config/nvim";
-    #   source = config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/nvim";
-    #   # source = config.lib.file.mkOutOfStoreSymlink configPath;
-    #   # source = config.lib.file.mkOutOfStoreSymlink (builtins.toString ../../dotfiles/.config/nvim) ; # configPath;
-    #
-    #   # current_dir = builtins.toString ../../dotfiles/.config/nvim;
-    #   # ./nvim;
-    #   # source = ../../dotfiles/.config/nvim;
-    #   # source = /home/sultan/dotfiles/.config/nvim;
-    #   recursive = true;
-    #   target = ".config/nvim";
-    # };
 
     packages = with pkgs;
       [
