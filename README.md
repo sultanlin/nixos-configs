@@ -32,6 +32,7 @@ Github
 -- https://github.com/Misterio77/nixos-hyprland-example/blob/main/flake.nix
 -- https://github.com/dustinlyons/nixos-config
 -- https://github.com/WhiteBlackGoose/dotfiles/blob/nixos/nix-config/home/home.nix
+-- https://github.com/WhiteBlackGoose/my-nix
 -- https://github.com/reckenrode/nixos-configs/blob/main/home-manager/reckenrode/home.nix
 -- https://github.com/akirak/homelab
 -- https://github.com/chpxu/dotfiles
@@ -80,6 +81,7 @@ Blogs / Books / Guides / Articles etc
 -- https://www.tweag.io/blog/2020-05-25-flakes/
 -- https://tech.aufomm.com/my-nixos-journey-home-manager/
 -- https://animeshz.github.io/site/notes/20-29--DevEnvironment/21--Linux/21.02-Nix.html
+-- https://wbg.gg/blog/nixos/
 
 - Reddit posts
 -- https://www.reddit.com/r/NixOS/comments/qpqnfq/flake_structure_for_multi_system/?rdt=37277
@@ -99,3 +101,6 @@ Blogs / Books / Guides / Articles etc
 -- https://www.reddit.com/r/NixOS/comments/183mb21/why_there_isnt_a_easy_idiot_guide_for_nixos_yet/
 -- https://www.reddit.com/r/NixOS/comments/zxlv2t/nixos_desktop_new_user_guide/
 
+
+- Neovim
+-- https://www.reddit.com/r/NixOS/comments/106jpy5/best_way_to_setup_nvim_on_nixos/
