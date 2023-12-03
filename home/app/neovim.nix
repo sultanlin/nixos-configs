@@ -10,7 +10,6 @@
 #  Neovim's configuration and all its dependencies(lsp, formatter, etc.)
 #
 #e#############################################################################
-in
 {
   nixpkgs.config = {
     programs.npm = {
