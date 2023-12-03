@@ -57,13 +57,12 @@ in
   programs.gh = {
     enable = true;
   };
-
   
   home = {
     file.".config/nvim" = {
-      # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
-      source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/config/nvim";
-      #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
+      # source = config.lib.file.mkOutOfStoreSymlink "/home/sultan/nixos-config/dotfiles/config/nvim";
+      # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       recursive = true;
       target = ".config/nvim";
     };
