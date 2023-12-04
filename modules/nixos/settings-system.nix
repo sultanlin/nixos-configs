@@ -182,6 +182,7 @@
           "Iosevka"
 	        "SourceCodePro" 
 	        "Hack"
+          "Meslo"
         ];
       })
 
