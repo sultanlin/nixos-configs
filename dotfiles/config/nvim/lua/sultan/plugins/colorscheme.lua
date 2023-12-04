@@ -9,8 +9,8 @@ return {
       -- load the colorscheme here
       -- vim.cmd("colorscheme tokyonight-night")
       -- vim.cmd("colorscheme tokyonight")
-      vim.cmd("colorscheme gruvbox")
-      -- vim.cmd("colorscheme bamboo")
+      -- vim.cmd("colorscheme gruvbox")
+      vim.cmd("colorscheme bamboo")
 
     end
   },
