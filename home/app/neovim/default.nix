@@ -47,6 +47,9 @@ in
         	#'';
 	#}
       gruvbox-nvim
+      #{
+      #gruvbox-nvim
+      #}
       tokyonight-nvim
       #gruvbox-nvim
       nvim-treesitter.withAllGrammars
