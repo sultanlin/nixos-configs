@@ -18,6 +18,7 @@ NixOS Video References
 -- https://www.youtube.com/@grok.computer       grok.computer channel
 -- https://www.youtube.com/watch?v=HvPfIiCnm6U  Jonas Chevalier - Using direnv with Nix    
 -- https://www.youtube.com/watch?v=90P-Ml1318U
+-- https://www.youtube.com/watch?v=IRRtk320j2A  Titus NixOS Config - Autologin - Flatpak - Fonts - Polkit
 
 Github
 
