@@ -6,7 +6,8 @@
     let
         hostname = "vm"; #current system/profile
         username = "sultan";
-        dotfilesConfig = "/home/sultan/nixos-config/dotfiles/config";
+        # dotfilesConfig = "/home/sultan/nixos-config/dotfiles/config";
+        dotfilesConfig = /home/sultan/nixos-config/dotfiles/config;
 	userfullname = "Sultan Linjawi";
 	useremail = "skorpion219@hotmail.co.uk";
 	
