@@ -8,8 +8,8 @@ return {
     config = function()
       -- load the colorscheme here
       -- vim.cmd("colorscheme tokyonight-night")
-      vim.cmd("colorscheme tokyonight")
-      -- vim.cmd("colorscheme gruvbox")
+      -- vim.cmd("colorscheme tokyonight")
+      vim.cmd("colorscheme gruvbox")
       -- vim.cmd("colorscheme bamboo")
 
     end
@@ -31,6 +31,7 @@ return {
   { "sainnhe/everforest",    event = "VeryLazy" },
   { "sainnhe/gruvbox-material",    event = "VeryLazy" },
   { "ribru17/bamboo.nvim",    event = "VeryLazy" },
+  { "tanvirtin/monokai.nvim",    event = "VeryLazy" },
 
 
 
