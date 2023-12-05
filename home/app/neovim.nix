@@ -79,6 +79,7 @@ in
       refactoring-nvim
       nvim-ts-context-commentstring
       telescope-fzf-native-nvim
+      nvim-autopairs
       ];
     };
   };
