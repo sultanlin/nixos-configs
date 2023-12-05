@@ -39,9 +39,7 @@ in
       plugins = with pkgs.vimPlugins; [
         # search all the plugins using https://search.nixos.org/packages
       
-      #
       # COLORSCHEME
-      #
       gruvbox-nvim
       gruvbox-material
       tokyonight-nvim
@@ -62,10 +60,14 @@ in
       everforest
       monokai-pro-nvim
 # bamboo-nvim not yet available
-      
 
+      # TREESITTER
       nvim-treesitter.withAllGrammars
       nvim-treesitter-textobjects
+      nvim-ts-context-commentstring
+      nvim-ts-autotag
+
+
       telescope-nvim
       nvim-lspconfig
       #{
@@ -91,7 +93,6 @@ in
       lualine-nvim
       dressing-nvim
       refactoring-nvim
-      nvim-ts-context-commentstring
       telescope-fzf-native-nvim
       nvim-autopairs
       ];
