@@ -82,15 +82,17 @@
       null-ls-nvim
       which-key-nvim
       comment-nvim
-      {
-        plugin = nvim-surround;
-        config = toLua "require(\"surround\").setup()";
-      }
+      # {
+      #   plugin = nvim-surround;
+      #   config = toLua "require(\"surround\").setup()";
+      # }
       gitsigns-nvim
-      {
-        plugin = indent-blankline-nvim;
-        config = toLua "require(\"ibl\").setup()";
-      }
+      # {
+      #   plugin = indent-blankline-nvim;
+      #   config = toLua "require(\"ibl\").setup()";
+      # }
+      nvim-surround
+      indent-blankline-nvim
       lualine-nvim
       refactoring-nvim
       nvim-autopairs
