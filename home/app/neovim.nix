@@ -91,7 +91,7 @@
       which-key-nvim
       comment-nvim
       {
-        plugin = gitsigns;
+        plugin = gitsigns-nvim;
         type = "lua";
         config = ''
           require("gitsigns").setup()
