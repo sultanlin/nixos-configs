@@ -38,18 +38,32 @@ in
       # currently we use lazy.nvim as neovim's package manager, so comment this one.
       plugins = with pkgs.vimPlugins; [
         # search all the plugins using https://search.nixos.org/packages
-	#{
-		#plugin = gruvbox-nvim;
-		#plugin = tokyonight;
-		#type = "lua";
-        	#config = ''
-          	#	require("plugins.theme")
-        	#'';
-	#}
+      
+      #
+      # COLORSCHEME
+      #
       gruvbox-nvim
+      gruvbox-material
       tokyonight-nvim
       oceanic-next
-      #gruvbox-nvim
+      catppuccin-nvim
+      nightfox-nvim
+      onehalf
+      kanagawa-nvim
+      onedark-nvim
+      #onedarkpro-nvim
+      nord-nvim
+      onenord-nvim
+      neovim-ayu
+      papercolor-theme
+      iceberg-vim
+      nightfly
+      sonokai
+      everforest
+      monokai-pro-nvim
+# bamboo-nvim not yet available
+      
+
       nvim-treesitter.withAllGrammars
       nvim-treesitter-textobjects
       telescope-nvim
