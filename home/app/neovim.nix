@@ -14,9 +14,9 @@
     };
   };
 
-  home.sessionVariables = {
-    EDITOR = "${config.home.profileDirectory}/bin/nvim";
-  };
+  #home.sessionVariables = {
+  #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
+  #};
 
   programs = {
     neovim =
