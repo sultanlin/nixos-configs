@@ -15,7 +15,12 @@
   };
 
   programs = {
-    neovim = {
+    neovim =
+    let
+      toLua = str: "lua << EOF\n${str}\nEOF\n";
+      toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+    in
+    {
       enable = true;
       defaultEditor = true;
 
@@ -77,9 +82,15 @@
       null-ls-nvim
       which-key-nvim
       comment-nvim
-      nvim-surround
+      {
+        plugin = nvim-surround;
+        config = toLua "require(\"surround\").setup()" 
+      }
       gitsigns-nvim
-      indent-blankline-nvim
+      {
+        plugin = indent-blankline-nvim;
+        config = toLua "require(\"ibl\").setup()" 
+      }
       lualine-nvim
       refactoring-nvim
       nvim-autopairs
