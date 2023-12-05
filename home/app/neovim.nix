@@ -48,6 +48,7 @@ in
 	#}
       gruvbox-nvim
       tokyonight-nvim
+      oceanic-next
       #gruvbox-nvim
       nvim-treesitter.withAllGrammars
       nvim-treesitter-textobjects
@@ -76,6 +77,8 @@ in
       lualine-nvim
       dressing-nvim
       refactoring-nvim
+      nvim-ts-context-commentstring
+      telescope-fzf-native-nvim
       ];
     };
   };
