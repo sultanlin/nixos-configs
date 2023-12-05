@@ -14,6 +14,10 @@
     };
   };
 
+  home.sessionVariables = {
+    EDITOR = "${config.home.profileDirectory}/bin/nvim";
+  };
+
   programs = {
     neovim =
     let
@@ -23,6 +27,9 @@
     {
       enable = true;
       defaultEditor = true;
+
+      # Nightly maybe?
+      # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
 
       viAlias = true;
       vimAlias = true;
@@ -53,13 +60,14 @@
       sonokai
       everforest
       monokai-pro-nvim
-# bamboo-nvim not yet available
+      # bamboo-nvim not yet available
 
       # TREESITTER
       nvim-treesitter.withAllGrammars
       nvim-treesitter-textobjects
       nvim-ts-context-commentstring
       nvim-ts-autotag
+      nvim-ts-rainbow
 
       # TELESCOPE
       telescope-nvim
@@ -83,9 +91,11 @@
       which-key-nvim
       comment-nvim
       {
-        plugin = gitsigns-nvim;
+        plugin = gitsigns;
         type = "lua";
-        config = "require('gitsigns').setup()";
+        config = ''
+          require("gitsigns").setup()
+        '';
       }
       nvim-surround
       indent-blankline-nvim   # DONE
