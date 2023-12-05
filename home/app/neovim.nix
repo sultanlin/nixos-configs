@@ -84,12 +84,12 @@
       comment-nvim
       {
         plugin = nvim-surround;
-        config = toLua "require(\"surround\").setup()" 
+        config = toLua "require(\"surround\").setup()";
       }
       gitsigns-nvim
       {
         plugin = indent-blankline-nvim;
-        config = toLua "require(\"ibl\").setup()" 
+        config = toLua "require(\"ibl\").setup()";
       }
       lualine-nvim
       refactoring-nvim
