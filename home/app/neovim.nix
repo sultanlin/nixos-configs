@@ -3,9 +3,6 @@
   config,
   ...
 }:
-let
-  configPath = builtins.toString ../../dotfiles/.config/nvim;
-in
 {
   nixpkgs.config = {
     programs.npm = {
@@ -19,10 +16,6 @@ in
 
   programs = {
     neovim = {
-      #let
-      #  toLua = str: "lua << EOF\n${str}\nEOF\n";
-      #  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-      #in
       enable = true;
       defaultEditor = true;
 
@@ -33,13 +26,9 @@ in
       withNodeJs = true;
       extraPackages = with pkgs; [];
 
-      #configFile.source = ../../dotfiles/.config/nvim;
-
-      # currently we use lazy.nvim as neovim's package manager, so comment this one.
       plugins = with pkgs.vimPlugins; [
-        # search all the plugins using https://search.nixos.org/packages
       
-      # COLORSCHEME
+      # COLORSCHEMES
       gruvbox-nvim
       gruvbox-material
       tokyonight-nvim
@@ -67,34 +56,38 @@ in
       nvim-ts-context-commentstring
       nvim-ts-autotag
 
-
+      # TELESCOPE
       telescope-nvim
-      nvim-lspconfig
-      #{
-        nvim-cmp
-      #}
+      telescope-fzf-native-nvim
+      #
+      # COMPLETION
+      nvim-cmp
+      luasnip
       cmp-path
       cmp-buffer
       cmp-nvim-lsp
-      cmp-nvim-lua
       cmp_luasnip
-      nvim-autopairs
-      luasnip
+      cmp-cmdline
       friendly-snippets
       lspkind-nvim
+      cmp-nvim-lua
+
+      nvim-lspconfig
+      nvim-autopairs
       null-ls-nvim
-      plenary-nvim
-      nvim-web-devicons
       which-key-nvim
       comment-nvim
       nvim-surround
       gitsigns-nvim
       indent-blankline-nvim
       lualine-nvim
-      dressing-nvim
       refactoring-nvim
-      telescope-fzf-native-nvim
       nvim-autopairs
+
+      # CORE
+      plenary-nvim
+      nvim-web-devicons
+      dressing-nvim
       ];
     };
   };
