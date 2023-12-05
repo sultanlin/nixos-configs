@@ -64,7 +64,7 @@
       # TELESCOPE
       telescope-nvim
       telescope-fzf-native-nvim
-      #
+
       # COMPLETION
       nvim-cmp
       luasnip
@@ -82,19 +82,14 @@
       null-ls-nvim
       which-key-nvim
       comment-nvim
-      # {
-      #   plugin = nvim-surround;
-      #   config = toLua "require(\"surround\").setup()";
-      # }
-      gitsigns-nvim
-      # {
-      #   plugin = indent-blankline-nvim;
-      #   config = toLua "require(\"ibl\").setup()";
-      # }
+      {
+        plugin = gitsigns-nvim;
+        config = "require('gitsigns').setup()";
+      }
       nvim-surround
-      indent-blankline-nvim
-      lualine-nvim
-      refactoring-nvim
+      indent-blankline-nvim   # DONE
+      lualine-nvim            # DONE
+      refactoring-nvim        
       nvim-autopairs
 
       # CORE
@@ -162,6 +157,9 @@
         gopls
         golangci-lint
         delve
+
+        # C#
+        omnisharp-roslyn
 
         # Additional
         nodePackages.bash-language-server
