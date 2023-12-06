@@ -91,6 +91,11 @@
       which-key-nvim
       comment-nvim
       gitsigns-nvim
+
+      # This does not work, unsure why
+      # Maybe because I'm using outofstoresymlink.
+      # TLDR the config is supposed to be added to init.lua
+      # Maybe I'm doing something that conflicts with that
       #{
       #  plugin = gitsigns-nvim;
       #  type = "lua";
@@ -114,23 +119,21 @@
   home.packages = with pkgs; [
         #-- c/c++
         cmake
+        cmake-language-server
         gnumake
         checkmake
         gcc # c/c++ compiler, required by nvim-treesitter!
-
-        #-- Optional Requirements:
-        gdu # disk usage analyzer, required by AstroNvim
-        ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
-	      verible
-        fd
+        clang-tools
+        cppcheck
+        gdb
 
         # https://github.com/LongerHV/nixos-configuration/blob/48c8052cb47c8d83f14adbd5c2c142ebef142dd3/home-manager/config/neovim.nix#L246
           
-        # Essentials
+        #-- Essentials
         nodePackages.npm
         nodePackages.neovim
 
-        # Python
+        #-- Python
         (python3.withPackages (ps: with ps; [
           setuptools # Required by pylama for some reason
           pylama
@@ -138,55 +141,89 @@
           isort
           yamllint
           debugpy
+          ruff-lsp
         ]))
         nodePackages.pyright
 
-        # Lua
+        #-- Lua
         lua-language-server
         selene
+        stylua
 
-        # Nix
-        statix
-        nixpkgs-fmt
+        #-- Rust
+        rust-analyzer
+        cargo # rust package manager
+        rustfmt
+
+        #-- Nix
+        statix # Lints and suggestions for the nix programming language
+        deadnix # Find and remove unused code in .nix source files
+        alejandra # Nix Code Formatter
         nil
+        rnix-lsp
+        nixpkgs-fmt
 
-        # C, C++
-        clang-tools
-        cppcheck
-
-        # Shell scripting
+        #-- Bash/Shell scripting
+        nodePackages.bash-language-server
         shfmt
         shellcheck
         shellharden
 
-        # JavaScript
+        #-- Javascript/Typescript --#
         nodePackages.prettier
         nodePackages.eslint
+        nodePackages.typescript
         nodePackages.typescript-language-server
+        # HTML/CSS/JSON/ESLint language servers extracted from vscode
+        nodePackages.vscode-langservers-extracted
+        nodePackages."@tailwindcss/language-server"
 
-        # Go
+        #-- Go
         go
-        gopls
+        gomodifytags
+        iferr # generate error handling code for go
+        impl # generate function implementation for go
+        gotools # contains tools like: godoc, goimports, etc.
+        gopls # go language server
+        delve # go debugger
         golangci-lint
-        delve
 
-        # C#
+        #-- C#
         omnisharp-roslyn
 
-        # Additional
-        nodePackages.bash-language-server
-        nodePackages.yaml-language-server
+        #-- CloudNative
         nodePackages.dockerfile-language-server-nodejs
-        nodePackages.vscode-langservers-extracted
+        # terraform  # install via brew on macOS
+        terraform-ls
+        jsonnet
+        jsonnet-language-server
+        hadolint # Dockerfile linter
+
+        # Additional
         nodePackages.markdownlint-cli
-        taplo-cli
         codespell
         gitlint
-        terraform-ls
-        actionlint
+        taplo # TOML language server / formatter / validator
+        taplo-cli
+        nodePackages.yaml-language-server
+        sqlfluff # SQL linter
+        actionlint # GitHub Actions linter
+        buf # protoc plugin for linting and formatting
+        proselint # English prose linter
+        tree-sitter # common language parser/highlighter
+        marksman # language server for markdown
+        glow # markdown previewer
+        fzf
 
-	# Clipboard
-	xclip
-	wl-clipboard
+        # Clipboard
+        xclip
+        wl-clipboard
+
+        #-- Optional Requirements:
+        gdu # disk usage analyzer, required by AstroNvim
+        ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
+	      verible
+        fd
+
   ];
 }
