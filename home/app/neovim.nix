@@ -91,6 +91,7 @@
       mason-lspconfig-nvim
       mason-tool-installer-nvim
       null-ls-nvim
+      neodev-nvim
 
       nvim-autopairs
       which-key-nvim
