@@ -40,7 +40,7 @@
 
       plugins = with pkgs.vimPlugins; [
       
-      # COLORSCHEMES
+      #-- COLORSCHEMES
       gruvbox-nvim
       gruvbox-material
       tokyonight-nvim
@@ -62,18 +62,18 @@
       monokai-pro-nvim
       # bamboo-nvim not yet available
 
-      # TREESITTER
+      #-- TREESITTER
       nvim-treesitter.withAllGrammars
       nvim-treesitter-textobjects
       nvim-ts-context-commentstring
       nvim-ts-autotag
       nvim-ts-rainbow
 
-      # TELESCOPE
+      #-- TELESCOPE
       telescope-nvim
       telescope-fzf-native-nvim
 
-      # COMPLETION
+      #-- COMPLETION
       nvim-cmp
       luasnip
       cmp-path
@@ -85,9 +85,14 @@
       lspkind-nvim
       cmp-nvim-lua
 
+      #-- LSP - Formatting - Linting
       nvim-lspconfig
-      nvim-autopairs
+      mason-nvim
+      mason-lspconfig-nvim
+      mason-tool-installer-nvim
       null-ls-nvim
+
+      nvim-autopairs
       which-key-nvim
       comment-nvim
       gitsigns-nvim
@@ -177,6 +182,7 @@
         # HTML/CSS/JSON/ESLint language servers extracted from vscode
         nodePackages.vscode-langservers-extracted
         nodePackages."@tailwindcss/language-server"
+        emmet-ls
 
         #-- Go
         go
