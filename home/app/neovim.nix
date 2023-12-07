@@ -87,9 +87,9 @@
 
       #-- LSP - Formatting - Linting
       nvim-lspconfig
-      mason-nvim
-      mason-lspconfig-nvim
-      mason-tool-installer-nvim
+      # mason-nvim
+      # mason-lspconfig-nvim
+      # mason-tool-installer-nvim
       null-ls-nvim
       neodev-nvim
 
@@ -114,8 +114,12 @@
       lualine-nvim            # DONE
       refactoring-nvim        
       nvim-autopairs
+      eyeliner-nvim
 
-      # CORE
+      #-- Future plugins
+      # fzf-lua
+
+      #-- CORE
       plenary-nvim
       nvim-web-devicons
       dressing-nvim
