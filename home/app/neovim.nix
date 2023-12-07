@@ -245,6 +245,7 @@
   home.sessionVariables = {
           # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
     OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
+    TESTING_PATH = "This/was/just/a/test";
   };
 # home.file."/home/sultan/Desktop/csharp-omnisharp/".source = pkgs.omnisharp-roslyn;
 }
