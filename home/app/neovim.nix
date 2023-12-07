@@ -63,14 +63,14 @@
       # bamboo-nvim not yet available
 
       #-- TREESITTER
-      nvim-treesitter.withAllGrammars
+      nvim-treesitter.withAllGrammars       # Highlight, edit, and navigate code
       nvim-treesitter-textobjects
       nvim-ts-context-commentstring
       nvim-ts-autotag
       nvim-ts-rainbow
 
       #-- TELESCOPE
-      telescope-nvim
+      telescope-nvim                # Fuzzy finder (files, lsp, etc)
       telescope-fzf-native-nvim
 
       #-- COMPLETION
@@ -86,17 +86,21 @@
       cmp-nvim-lua
 
       #-- LSP - Formatting - Linting
-      nvim-lspconfig
+      nvim-lspconfig        # LSP configuration
       # mason-nvim
       # mason-lspconfig-nvim
       # mason-tool-installer-nvim
       null-ls-nvim
-      neodev-nvim
+      neodev-nvim       # Additional lua config
 
       nvim-autopairs
       which-key-nvim
       comment-nvim
       gitsigns-nvim
+      # Github plugins
+      vim-fugitive
+      vim-rhubarb
+      fidget-nvim     # Useful status updates for LSP
 
       # This does not work, unsure why
       # Maybe because I'm using outofstoresymlink.
