@@ -114,9 +114,10 @@
       lualine-nvim            # DONE
       refactoring-nvim        
       nvim-autopairs
-      eyeliner-nvim
 
       #-- Future plugins
+      # eyeliner-nvim
+      # flash-nvim
       # fzf-lua
 
       #-- CORE
