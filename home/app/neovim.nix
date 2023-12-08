@@ -61,6 +61,7 @@
       everforest
       monokai-pro-nvim
       # bamboo-nvim not yet available
+      papercolor-theme
 
       #-- TREESITTER
       nvim-treesitter.withAllGrammars       # Highlight, edit, and navigate code
