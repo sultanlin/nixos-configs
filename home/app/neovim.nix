@@ -91,8 +91,10 @@
       # mason-nvim
       # mason-lspconfig-nvim
       # mason-tool-installer-nvim
-      null-ls-nvim
+      # null-ls-nvim
       neodev-nvim       # Additional lua config
+      conform-nvim      # Formatter
+      nvim-lint
 
       nvim-autopairs
       which-key-nvim
@@ -194,6 +196,7 @@
         nodePackages.vscode-langservers-extracted
         nodePackages."@tailwindcss/language-server"
         emmet-ls
+        prettierd
 
         #-- Go
         go
