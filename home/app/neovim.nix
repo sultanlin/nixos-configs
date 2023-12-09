@@ -159,6 +159,7 @@
         ruff-lsp
       ]))
     nodePackages.pyright
+    ruff
 
     #-- Lua
     lua-language-server
