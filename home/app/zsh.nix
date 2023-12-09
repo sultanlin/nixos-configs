@@ -66,9 +66,9 @@
       completionInit = ''
         # Basic auto/tab complete:
         autoload -U compinit
-        zstyle ':completion:*' menu select
+        zstyle ':completion:*' menu select single-ignored show
         ignored-patterns '*.lock'
-        single-ignored show
+        # single-ignored show
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
