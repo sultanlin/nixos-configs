@@ -1,6 +1,4 @@
-{ pkgs, username, ... }:
-
-{
+{pkgs, ...}: {
   programs = {
     zsh = {
       enable = true;
@@ -13,10 +11,10 @@
       autocd = true;
 
       history = {
-	        ignoreAllDups = true;
-		      extended = true;
-		      expireDuplicatesFirst = true;
-	    };
+        ignoreAllDups = true;
+        extended = true;
+        expireDuplicatesFirst = true;
+      };
 
       dirHashes = {
         docs = "$(xdg-user-dir DOCUMENTS)";
@@ -38,12 +36,12 @@
       #'';                                       # Theming
 
       # shellAliases = {
-        #   ne = "nix-env";
-        #   ni = "nix-env -iA";
-        #   no = "nixops";
-        #   ns = "nix-shell --pure";
-        #   please = "sudo";
-        # };
+      #   ne = "nix-env";
+      #   ni = "nix-env -iA";
+      #   no = "nixops";
+      #   ns = "nix-shell --pure";
+      #   please = "sudo";
+      # };
 
       initExtra = ''
         # zsh vi mode install
@@ -70,10 +68,11 @@
         autoload -U compinit
         zstyle ':completion:*' menu select
         ignored-patterns '*.lock'
+        single-ignored show
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
-      '';  
+      '';
     };
   };
   home.packages = with pkgs; [
