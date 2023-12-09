@@ -156,7 +156,7 @@
         isort
         yamllint
         debugpy
-        ruff-lsp
+        # ruff-lsp
       ]))
     nodePackages.pyright
     ruff-lsp
