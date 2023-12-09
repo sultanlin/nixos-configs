@@ -68,7 +68,7 @@
         autoload -U compinit
         zstyle ':completion:*' menu select
         ignored-patterns '*.lock'
-        # single-ignored show didn't work
+        single-ignored show # didn't work
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
