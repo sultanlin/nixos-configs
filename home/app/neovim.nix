@@ -117,6 +117,7 @@
         lualine-nvim # DONE
         refactoring-nvim
         nvim-autopairs
+        guess-indent-nvim
 
         #-- Future plugins
         # eyeliner-nvim
@@ -208,6 +209,7 @@
 
     #-- C#
     omnisharp-roslyn
+    netcoredbg # C# Debugger
 
     #-- CloudNative
     nodePackages.dockerfile-language-server-nodejs
