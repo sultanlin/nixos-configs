@@ -101,6 +101,24 @@
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
 
+        nvim-surround
+        indent-blankline-nvim # DONE
+        lualine-nvim # DONE
+        refactoring-nvim
+        nvim-autopairs
+        # guess-indent-nvim
+        vim-sleuth
+
+        #-- Future plugins
+        # eyeliner-nvim
+        # flash-nvim
+        # fzf-lua
+
+        #-- CORE
+        plenary-nvim
+        nvim-web-devicons
+        dressing-nvim
+
         # This does not work, unsure why
         # Maybe because I'm using outofstoresymlink.
         # TLDR the config is supposed to be added to init.lua
@@ -112,22 +130,6 @@
         #    require("gitsigns").setup()
         #  '';
         #}
-        nvim-surround
-        indent-blankline-nvim # DONE
-        lualine-nvim # DONE
-        refactoring-nvim
-        nvim-autopairs
-        guess-indent-nvim
-
-        #-- Future plugins
-        # eyeliner-nvim
-        # flash-nvim
-        # fzf-lua
-
-        #-- CORE
-        plenary-nvim
-        nvim-web-devicons
-        dressing-nvim
       ];
     };
   };
