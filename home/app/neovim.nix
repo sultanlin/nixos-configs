@@ -195,6 +195,7 @@
     nodePackages.eslint
     nodePackages.typescript
     nodePackages.typescript-language-server
+    eslint_d
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
     nodePackages."@tailwindcss/language-server"
