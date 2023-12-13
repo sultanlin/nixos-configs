@@ -183,6 +183,7 @@
     nil
     rnix-lsp
     nixpkgs-fmt
+    nixd
 
     #-- Bash/Shell scripting
     nodePackages.bash-language-server
