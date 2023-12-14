@@ -227,6 +227,7 @@
 
     # Additional
     nodePackages.markdownlint-cli
+    vale
     codespell
     gitlint
     taplo # TOML language server / formatter / validator
