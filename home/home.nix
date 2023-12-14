@@ -16,6 +16,8 @@
       XDG_BIN_HOME = "$HOME/.local/bin"; # Not technically in the official xdg specification
       XDG_DESKTOP_DIR = "$HOME/desktop";
       XDG_DOWNLOAD_DIR = "$HOME/downloads";
+      # AJLOW_OCAML_TOOLS = "dune merlin ocaml-lsp-server odoc ocamlformat utop
+      # dune-release core core_unix base";
     };
     sessionPath = [
       "$XDG_BIN_HOME"
