@@ -4,11 +4,15 @@ local lualine = require("lualine")
 
 -- configure lualine with modified theme
 lualine.setup({
-  icons_enabled = true,
-  -- theme = 'tokyonight',
-  ---     component_separators = '|',
-  ---     section_separators = '',
-  
+  options = {
+    --   theme = "gruvbox",
+    icons_enabled = true,
+    -- theme = 'tokyonight',
+    -- theme = "gruvbox-material",
+    -- theme = "PaperColor",
+    component_separators = '|',
+    section_separators = '',
+  },
 
   -- options = {
   --   theme = "gruvbox",

@@ -5,7 +5,9 @@ local luasnip = require("luasnip")
 local lspkind = require("lspkind")
 
 -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-require("luasnip.loaders.from_vscode")        --- .lazy_load()
+-- require("luasnip.loaders.from_vscode").load()        --- .lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip").filetype_extend("typescriptreact", { "html" })
 
 cmp.setup({
   completion = {
@@ -24,7 +26,7 @@ cmp.setup({
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({
-      --select = false 
+      -- select = false,
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
