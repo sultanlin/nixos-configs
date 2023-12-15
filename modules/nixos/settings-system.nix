@@ -1,45 +1,20 @@
-{ config, lib, pkgs, stable, inputs, hostname, ... }:
-
 {
-
-  # supported fil systems, so we can mount any removable disks with these filesystems
-  boot.supportedFilesystems = [
-    "ext4"
-    "btrfs"
-    "xfs"
-    #"zfs"
-    "ntfs"
-    "fat"
-    "vfat"
-    "exfat"
-    "cifs" # mount windows share
-  ];
-
-  # Bootloader, grub vs systemd-boot. Grub better for dual booting
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      configurationLimit = lib.mkDefault 10;
-      useOSProber = true;
-    };
-    timeout = 1;
-    # UEFI settings
-    # efi = {
-    #     canTouchEfiVariables = true;
-    #     efiSysMountPoint = "/boot";
-    #   }
-  };
-
+  config,
+  lib,
+  pkgs,
+  stable,
+  inputs,
+  hostname,
+  ...
+}: {
   # Networking
   networking = {
     networkmanager.enable = true;
     hostName = hostname;
   };
 
-
   # Time zone and Internationalisation
-  time.timeZone = "Asia/Riyadh";        
+  time.timeZone = "Asia/Riyadh";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -61,12 +36,13 @@
   };
 
   environment = {
-    variables = {                           # Environment Variables
+    variables = {
+      # Environment Variables
       TERMINAL = "${"kitty"}";
       EDITOR = "${"nvim"}";
       VISUAL = "${"nvim"}";
     };
- };
+  };
 
   # Default shell
   #users.defaultUserShell = pkgs.zsh;
@@ -84,25 +60,26 @@
   # https://github.com/rvaiya/keyd
   services.keyd = {
     enable = true;
-  #  settings = {
-  #    main = {
-  #      # overloads the capslock key to function as both escape (when tapped) and control (when held)
-  #      capslock = "overload(control, esc)";
-  #    };
-  #  };
+    #  settings = {
+    #    main = {
+    #      # overloads the capslock key to function as both escape (when tapped) and control (when held)
+    #      capslock = "overload(control, esc)";
+    #    };
+    #  };
   };
 
   hardware.bluetooth.enable = true;
 
   services = {
     # Enable openssh daemon
-    openssh = {                             # SSH
+    openssh = {
+      # SSH
       enable = true;
-      allowSFTP = true;                     # SFTP
+      allowSFTP = true; # SFTP
       settings = {
         X11Forwarding = true;
-	PermitRootLogin = "no"; # disable root login
-	#PasswordAuthentication = false; # disable password login
+        PermitRootLogin = "no"; # disable root login
+        #PasswordAuthentication = false; # disable password login
       };
       openFirewall = true;
     };
@@ -128,21 +105,22 @@
     ];
   };
 
-
-  nix = {                                   # Nix Package Manager Settings
-    settings ={
+  nix = {
+    # Nix Package Manager Settings
+    settings = {
       auto-optimise-store = true;
       # Enable flakes globally
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
     };
-    gc = {                                  # Garbage Collection
+    gc = {
+      # Garbage Collection
       automatic = lib.mkDefault true;
       dates = lib.mkDefault "weekly";
       options = lib.mkDefault "--delete-older-than 1w";
     };
   };
 
-  nixpkgs.config.allowUnfree = true;        # Allow Proprietary Software.
+  nixpkgs.config.allowUnfree = true; # Allow Proprietary Software.
 
   environment.variables = {
     # fix https://github.com/NixOS/nixpkgs/issues/238025
@@ -159,19 +137,19 @@
       material-design-icons
       font-awesome
 
-      carlito                                 # NixOS
-      vegur                                   # NixOS
-      corefonts                               # MS
+      carlito # NixOS
+      vegur # NixOS
+      corefonts # MS
 
-      noto-fonts 
-      noto-fonts-cjk 
-      noto-fonts-emoji 
-      noto-fonts-extra 
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      noto-fonts-extra
 
-      source-sans 
-      source-serif 
-      source-han-sans 
-      source-han-serif 
+      source-sans
+      source-serif
+      source-han-sans
+      source-han-serif
 
       jetbrains-mono
       # nerdfonts
@@ -180,8 +158,8 @@
           "FiraCode"
           "JetBrainsMono"
           "Iosevka"
-	        "SourceCodePro" 
-	        "Hack"
+          "SourceCodePro"
+          "Hack"
           "Meslo"
         ];
       })
@@ -200,8 +178,6 @@
     };
   };
 }
-
-
 #      LC_ADDRESS = "ar_SA.UTF-8";
 #      LC_IDENTIFICATION = "ar_SA.UTF-8";
 #      LC_MEASUREMENT = "ar_SA.UTF-8";
@@ -211,3 +187,4 @@
 #      LC_PAPER = "ar_SA.UTF-8";
 #      LC_TELEPHONE = "ar_SA.UTF-8";
 #      LC_TIME = "ar_SA.UTF-8";
+
