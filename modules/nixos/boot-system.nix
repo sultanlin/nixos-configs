@@ -25,7 +25,7 @@
     grub = {
       enable = true;
       device = "/dev/sda";
-      configurationLimit = lib.mkDefault 10;
+      configurationLimit = 10; # lib.mkDefault 10;
       useOSProber = true;
     };
     timeout = 1;
