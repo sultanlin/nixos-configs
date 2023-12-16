@@ -109,7 +109,7 @@
         refactoring-nvim
         nvim-autopairs
         # guess-indent-nvim
-        # vim-sleuth
+        vim-sleuth
 
         #-- Future plugins
         # eyeliner-nvim
