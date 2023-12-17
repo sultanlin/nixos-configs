@@ -6,23 +6,23 @@
   ...
 }: {
   xdg.userDirs.enable = true;
-  # xdg.userDirs.createDirectories = true;
+  xdg.userDirs.createDirectories = true;
   # Packages that should be installed to the user profile.
   home = {
-    # sessionVariables = {
-    #   XDG_CACHE_HOME = "$HOME/.cache";
-    #   XDG_CONFIG_HOME = "$HOME/.config";
-    #   XDG_DATA_HOME = "$HOME/.local/share";
-    #   XDG_STATE_HOME = "$HOME/.local/state";
-    #   XDG_BIN_HOME = "$HOME/.local/bin"; # Not technically in the official xdg specification
-    #   XDG_DESKTOP_DIR = "$HOME/desktop";
-    #   XDG_DOWNLOAD_DIR = "$HOME/downloads";
-    #   # AJLOW_OCAML_TOOLS = "dune merlin ocaml-lsp-server odoc ocamlformat utop
-    #   # dune-release core core_unix base";
-    # };
-    # sessionPath = [
-    #   "$XDG_BIN_HOME"
-    # ];
+    sessionVariables = {
+      XDG_CACHE_HOME = "$HOME/.cache";
+      XDG_CONFIG_HOME = "$HOME/.config";
+      XDG_DATA_HOME = "$HOME/.local/share";
+      XDG_STATE_HOME = "$HOME/.local/state";
+      XDG_BIN_HOME = "$HOME/.local/bin"; # Not technically in the official xdg specification
+      XDG_DESKTOP_DIR = "$HOME/desktop";
+      XDG_DOWNLOAD_DIR = "$HOME/downloads";
+      # AJLOW_OCAML_TOOLS = "dune merlin ocaml-lsp-server odoc ocamlformat utop
+      # dune-release core core_unix base";
+    };
+    sessionPath = [
+      "$XDG_BIN_HOME"
+    ];
     packages = with pkgs; [
       neofetch
       nnn # terminal file manager
