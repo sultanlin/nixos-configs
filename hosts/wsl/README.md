@@ -10,3 +10,6 @@
 - Fixing too much used space after deleting
   https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2
   https://superuser.com/questions/1788147/wsl-distro-occupying-too-much-space-despite-not-having-so-many-files-in-it
+
+  - Initial install
+    https://stackoverflow.com/questions/73164546/error-file-nixpkgs-was-not-found-in-the-nix-search-path-add-it-using-nix-pa
