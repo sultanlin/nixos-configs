@@ -34,7 +34,7 @@
       nixos-modules = [
         nixos-wsl.nixosModules.wsl
         ./hosts/wsl
-        ./modules/hyprland.nix
+        # ./modules/hyprland.nix
       ];
       home-module = import ./home;
     };
