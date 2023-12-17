@@ -1,9 +1,13 @@
-{ config, pkgs, username, ... }:
-
 {
+  config,
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     # ./desktop
     ./app
+    ./home.nix
     # ./hyprland/hyprland.nix
   ];
 
