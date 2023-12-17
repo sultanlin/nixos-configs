@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
@@ -8,12 +10,13 @@
     #../../modules/user-group.nix
     #../../modules/fhs-fonts.nix
     #../cifs-mount.nix
-    #../nfs-mount.nix
+    ../nfs-mount.nix
   ];
 
   environment = {
-    systemPackages = with pkgs; [               # System Wide Packages
-      hello             # Test Package
+    systemPackages = with pkgs; [
+      # System Wide Packages
+      hello # Test Package
     ];
   };
 
