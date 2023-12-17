@@ -1,15 +1,18 @@
-{pkgs, config, specialArgs, ...}: 
-let
-  dotfilesConfig = specialArgs.dotfilesConfig;
-in 
 {
+  pkgs,
+  config,
+  specialArgs,
+  ...
+}: let
+  dotfilesConfig = specialArgs.dotfilesConfig;
+in {
   imports = [
     #./creative.nix
     #./gtk.nix
     #./immutable-file.nix
     #./ssh.nix
     #./wallpaper.nix
-    #./xdg.nix
+    ./xdg.nix
     ./bash.nix
     ./bat.nix
     ./btop.nix
@@ -40,7 +43,6 @@ in
     discord
     qq # https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications/networking/instant-messengers/qq
 
-
     # remote desktop(rdp connect)
     remmina
     freerdp # required by remmina
@@ -56,7 +58,7 @@ in
   programs.gh = {
     enable = true;
   };
-  
+
   home = {
     file.".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
