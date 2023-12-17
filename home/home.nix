@@ -2,9 +2,10 @@
   config,
   pkgs,
   username,
+  lib,
   ...
 }: {
-  xdg.userDirs.enable = true;
+  xdg.userDirs.enable = lib.mkForce true;
   xdg.userDirs.createDirectories = true;
   # Packages that should be installed to the user profile.
   home = {
