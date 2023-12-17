@@ -15,8 +15,8 @@
       XDG_DATA_HOME = "$HOME/.local/share";
       XDG_STATE_HOME = "$HOME/.local/state";
       XDG_BIN_HOME = "$HOME/.local/bin"; # Not technically in the official xdg specification
-      XDG_DESKTOP_DIR = "$HOME/desktop";
-      XDG_DOWNLOAD_DIR = "$HOME/downloads";
+      XDG_DESKTOP_DIR = "$HOME/Desktop";
+      XDG_DOWNLOAD_DIR = "$HOME/Downloads";
       # AJLOW_OCAML_TOOLS = "dune merlin ocaml-lsp-server odoc ocamlformat utop
       # dune-release core core_unix base";
     };
