@@ -9,6 +9,7 @@
       # histSize = 10000;
       # Automatically goes into directory without cd
       autocd = true;
+      defaultKeymap = "emacs";
 
       history = {
         ignoreAllDups = true;
@@ -44,8 +45,8 @@
       # };
 
       initExtra = ''
-        # zsh vi mode install
-        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+        # # zsh vi mode install
+        # source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
         # # zsh autopair
         source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
