@@ -11,6 +11,7 @@
   networking = {
     networkmanager.enable = true;
     hostName = hostname;
+    # Local networks
     hosts = {
       "192.168.1.40" = ["truenas"];
     };
