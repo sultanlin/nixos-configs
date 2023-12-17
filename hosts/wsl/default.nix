@@ -11,6 +11,7 @@
 }: {
   imports = [
     ../../modules/nixos
+    ../nfs-mount.nix
   ];
 
   # Remove grub, conflicts with native systemd in wsl
