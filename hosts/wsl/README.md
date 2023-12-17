@@ -13,3 +13,4 @@
 
   - Initial install
     https://stackoverflow.com/questions/73164546/error-file-nixpkgs-was-not-found-in-the-nix-search-path-add-it-using-nix-pa
+    https://github.com/NixOS/nixpkgs/issues/264852
