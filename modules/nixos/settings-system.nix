@@ -11,6 +11,9 @@
   networking = {
     networkmanager.enable = true;
     hostName = hostname;
+    hosts = {
+      "192.168.1.40" = ["truenas"];
+    };
   };
 
   # Time zone and Internationalisation
