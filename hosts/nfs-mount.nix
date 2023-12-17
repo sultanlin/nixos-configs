@@ -4,7 +4,7 @@
   ...
 }: {
   # mount a smb/cifs share
-  fileSystems."/home/${username}/SMB-Downloads" = {
+  fileSystems."/home/${username}/truenas/Backup" = {
     device = "192.168.1.40:/mnt/SingleHDD/Backup";
     fsType = "nfs";
     # options = [
