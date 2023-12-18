@@ -16,7 +16,7 @@
     virtualHosts."myblog.me" = {
       # enableACME = true;
       # forceSSL = true;
-      root = "/home/sultan/Documents/dev-learning/docs";
+      root = "/home/sultan/Documents/dev-learning/docs/index.html";
       # locations."/".proxyPass = "http://localhost:8080";
     };
   };
