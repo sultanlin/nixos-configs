@@ -15,4 +15,5 @@
       root = "/var/www/blog";
     };
   };
+  security.acme.acceptTerms = true;
 }
