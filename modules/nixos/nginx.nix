@@ -13,12 +13,13 @@
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
-    virtualHosts."localhost" = {
+    virtualHosts."sultan.me" = {
       # enableACME = true;
-      forceSSL = true;
-      root = "/home/sultan/Documents/dev-learning/docs";
-      # locations."/".proxyPass = "http://localhost:8080";
+      # forceSSL = true;
+      # root = "/home/sultan/Documents/dev-learning/docs";
+      locations."/home/sultan/Documents/dev-learning/docs".proxyPass = "http://localhost:8000";
     };
+    appendHttpConfig = "listen 127.0.0.1:80";
   };
   # security.acme = {
   #   acceptTerms = true;
