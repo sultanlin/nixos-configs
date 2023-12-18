@@ -13,7 +13,7 @@
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
-    virtualHosts."sultan.me" = {
+    virtualHosts."sultanlinj.me" = {
       # enableACME = true;
       # forceSSL = true;
       # root = "/home/sultan/Documents/dev-learning/docs";
