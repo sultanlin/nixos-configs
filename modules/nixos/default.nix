@@ -8,5 +8,6 @@
     #../cifs-mount.nix
     #../nfs-mount.nix
     ./shellscripts.nix
+    ./nginx.nix
   ];
 }
