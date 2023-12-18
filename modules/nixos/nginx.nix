@@ -17,8 +17,8 @@
       # default = true;
       # enableACME = true;
       # forceSSL = true;
-      # root = "/home/sultan/Documents/dev-learning/docs";
-      root = "/var/www/webserver";
+      root = "/home/sultan/Documents/dev-learning/docs";
+      # root = "/var/www/webserver";
       # locations."/home/sultan/Documents/dev-learning/docs".proxyPass = "http://localhost:8000";
     };
     # appendHttpConfig = "listen 127.0.0.1:80;";
