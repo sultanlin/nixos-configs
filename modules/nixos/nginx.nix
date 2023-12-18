@@ -15,5 +15,8 @@
       root = "/var/www/blog";
     };
   };
-  security.acme.acceptTerms = true;
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "foo@bar.com";
+  };
 }
