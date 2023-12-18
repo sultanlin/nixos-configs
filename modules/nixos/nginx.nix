@@ -9,7 +9,7 @@
 }: {
   services.nginx = {
     enable = true;
-    virtualHosts."blog.example.com" = {
+    virtualHosts."myblog.com" = {
       enableACME = true;
       forceSSL = true;
       root = "/var/www/blog";
