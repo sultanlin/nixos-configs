@@ -16,7 +16,7 @@
     virtualHosts."sultanlinj.me" = {
       # enableACME = true;
       # forceSSL = true;
-      root = "/home/sultan/Documents/dev-learning/docs";
+      root = "/home/sultan/Documents/dev-learning/docs/index.html";
       # locations."/home/sultan/Documents/dev-learning/docs".proxyPass = "http://localhost:8000";
     };
     # appendHttpConfig = "listen 127.0.0.1:80;";
