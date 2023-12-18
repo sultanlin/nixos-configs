@@ -13,17 +13,17 @@
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
-    virtualHosts."myblog.me" = {
-      enableACME = true;
+    virtualHosts."localhost" = {
+      # enableACME = true;
       forceSSL = true;
       root = "/home/sultan/Documents/dev-learning/docs";
       # locations."/".proxyPass = "http://localhost:8080";
     };
   };
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "foo@bar.com";
-  };
+  # security.acme = {
+  #   acceptTerms = true;
+  #   defaults.email = "foo@bar.com";
+  # };
 
   networking.firewall.allowedTCPPorts = [80 443];
 }
