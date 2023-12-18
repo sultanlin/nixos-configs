@@ -13,11 +13,11 @@
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
-    virtualHosts."myblog.com" = {
+    virtualHosts."myblog.me" = {
       # enableACME = true;
       # forceSSL = true;
-      # root = "/var/www/blog";
-      locations."/".proxyPass = "http://localhost:8080";
+      root = "/home/sultan/Documents/dev-learning/docs";
+      # locations."/".proxyPass = "http://localhost:8080";
     };
   };
   # security.acme = {
