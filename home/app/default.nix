@@ -66,5 +66,9 @@ in {
       recursive = true;
       # target = ".config/nvim";
     };
+    file.".config/tmux" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/tmux";
+      recursive = true;
+    };
   };
 }
