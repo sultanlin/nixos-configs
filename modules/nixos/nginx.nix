@@ -14,7 +14,7 @@
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
     virtualHosts."sultanlinj.me" = {
-      default = true;
+      # default = true;
       # enableACME = true;
       # forceSSL = true;
       # root = "/home/sultan/Documents/dev-learning/docs";
