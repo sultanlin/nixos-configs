@@ -1,8 +1,15 @@
 {
   pkgs,
   config,
+  inputs,
   ...
-}: {
+}: let
+  simplePlugin = input: name:
+    pkgs.vimUtils.buildVimPlugin {
+      inherit name;
+      src = input;
+    };
+in {
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -27,6 +34,7 @@
 
       # Nightly maybe?
       # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
+      # package = inputs.neovim-nightly.packages."${pkgs.system}".default.override(old: old // { inherit (pkgs) libvterm-neovim; });
 
       viAlias = true;
       vimAlias = true;
@@ -102,6 +110,8 @@
         vim-fugitive
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
+
+        vimPlugins.sentiment-nvim
 
         nvim-surround
         indent-blankline-nvim # DONE
@@ -252,6 +262,8 @@
     verible
     fd
   ];
+
+  sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
 
   home.sessionVariables = {
     # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
