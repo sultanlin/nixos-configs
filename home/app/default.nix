@@ -5,7 +5,9 @@
   ...
 }: let
   # dotfilesConfig = specialArgs.dotfilesConfig;
-  config_sym_dir = conf_path: config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/${conf_path}";
+  config_sym_dir = config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}";
+  #config_sym = conf_path: config.lib.file.mkOutOfStoreSymlink "${specialArgs.dotfilesConfig}/${conf_path}";
+      # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
 in {
   imports = [
     #./creative.nix
@@ -64,7 +66,8 @@ in {
     file.".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
-      source = config_sym_dir "nvim-nixos";
+      #source = config_sym "nvim-nixos";
+      source = "${config_sym}/nvim-nixos";
       recursive = true;
       # target = ".config/nvim";
     };
