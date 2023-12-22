@@ -162,7 +162,7 @@
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
 
-        vimPlugins.sentiment-nvim
+        sentiment-nvim
 
         nvim-surround
         indent-blankline-nvim # DONE
