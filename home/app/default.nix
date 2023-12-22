@@ -67,7 +67,7 @@ in {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       #source = config_sym "nvim-nixos";
-      source = "${config_sym}/nvim-nixos";
+      source = "${config_sym_dir}/nvim-nixos";
       recursive = true;
       # target = ".config/nvim";
     };
