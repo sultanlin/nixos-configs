@@ -44,7 +44,7 @@
   #   ];
   # };
 
-  nixpkgs.overlays = [
+  pkgs.overlays = [
     (
       final: prev: let
         simplePlugin = input: name:
