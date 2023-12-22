@@ -44,7 +44,7 @@
   #   ];
   # };
 
-  pkgs.overlays = [
+  nixpkgs.overlays = [
     (
       final: prev: let
         simplePlugin = input: name:
@@ -162,7 +162,10 @@
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
 
-        sentiment-nvim
+        {
+          plugin = vimPlugins.sentiment-nvim;
+        }
+        # sentiment-nvim
 
         nvim-surround
         indent-blankline-nvim # DONE
