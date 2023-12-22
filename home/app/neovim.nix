@@ -3,13 +3,13 @@
   config,
   inputs,
   ...
-}: let
-  simplePlugin = input: name:
-    pkgs.vimUtils.buildVimPlugin {
-      inherit name;
-      src = input;
-    };
-in {
+}: 
+  # simplePlugin = input: name:
+  #   pkgs.vimUtils.buildVimPlugin {
+  #     inherit name;
+  #     src = input;
+  #   };
+{
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -20,7 +20,30 @@ in {
     };
   };
 
-  sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
+  nixpkgs.overlays = [
+    (final: prev: 
+    let
+    simplePlugin = input: name:
+    prev.vimUtils.buildVimPlugin {
+      inherit name;
+      src = input;
+    };
+    in 
+    vimPlugins = prev.vimPlugins // {
+        sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
+    }
+    )
+  ];
+  # nixpkgs.overlays = [
+  #   (self: super: 
+  #   let
+  #     
+  #   in 
+  #     vimPlugins = super.vimPlugins // {
+  #       inherit sentiment-nvim;
+  #     };
+  #   )
+  # ];
   #home.sessionVariables = {
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
