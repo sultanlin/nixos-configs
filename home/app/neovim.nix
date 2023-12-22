@@ -3,13 +3,7 @@
   config,
   inputs,
   ...
-}:
-# simplePlugin = input: name:
-#   pkgs.vimUtils.buildVimPlugin {
-#     inherit name;
-#     src = input;
-#   };
-{
+}: {
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -20,55 +14,21 @@
     };
   };
 
-  # nixpkgs = {
-  #   overlays = [
-  #     (self: super:
-  #       let
-  #   simplePlugin = input: name:
-  #   prev.vimUtils.buildVimPlugin {
-  #     inherit name;
-  #     src = input;
-  #   };
-  #         # winresizer-vim = super.vimUtils.buildVimPlugin {
-  #         #   name = "winresizer-vim";
-  #         #   src = inputs.winresizer-vim;
-  #         # };
-  #       in
-  #       {
-  #         # vimPlugins =
-  #         #   super.vimPlugins // {
-  #         #     inherit winresizer-vim;
-  #         #   };
-  #       }
-  #     )
-  #   ];
-  # };
-
-  nixpkgs.overlays = [
-    (
-      final: prev: let
-        simplePlugin = input: name:
-          prev.vimUtils.buildVimPlugin {
-            inherit name;
-            src = input;
-          };
-      in {
-        vimPlugins =
-          prev.vimPlugins
-          // {
-            sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
-          };
-      }
-    )
-  ];
   # nixpkgs.overlays = [
-  #   (self: super:
-  #   let
-  #
-  #   in
-  #     vimPlugins = super.vimPlugins // {
-  #       inherit sentiment-nvim;
-  #     };
+  #   (
+  #     final: prev: let
+  #       simplePlugin = input: name:
+  #         prev.vimUtils.buildVimPlugin {
+  #           inherit name;
+  #           src = input;
+  #         };
+  #     in {
+  #       vimPlugins =
+  #         prev.vimPlugins
+  #         // {
+  #           sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
+  #         };
+  #     }
   #   )
   # ];
   #home.sessionVariables = {
@@ -162,10 +122,11 @@
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
 
-        {
-          plugin = vimPlugins.sentiment-nvim;
-        }
-        # sentiment-nvim
+        #  {
+        # error: Failed assertions:
+        # - sultan profile: `nixpkgs` options are disabled when `home-manager.useGlobalPkgs` is enabled.
+        #    plugin = vimPlugins.sentiment-nvim;
+        #  }
 
         nvim-surround
         indent-blankline-nvim # DONE
