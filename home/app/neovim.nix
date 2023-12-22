@@ -20,6 +20,7 @@ in {
     };
   };
 
+  sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
   #home.sessionVariables = {
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
@@ -262,8 +263,6 @@ in {
     verible
     fd
   ];
-
-  sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
 
   home.sessionVariables = {
     # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
