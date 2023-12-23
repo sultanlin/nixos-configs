@@ -55,11 +55,6 @@ in {
     wvkbd
   ];
 
-  # GitHub CLI tool
-  programs.gh = {
-    enable = true;
-  };
-
   home = {
     file.".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
@@ -69,8 +64,7 @@ in {
       # target = ".config/nvim";
     };
     #file.".config/tmux" = {
-    # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/tmux";
-    #  source = config_sym_dir "tmux";
+    # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
   };
