@@ -60,6 +60,22 @@
         # Up arrow grep searching (for example, type zsh and press up)
         source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+        zmodload zsh/terminfo
+        bindkey "$terminfo[kcuu1]" history-substring-search-up
+        bindkey "$terminfo[kcud1]" history-substring-search-down
+        bindkey '^[[A' history-substring-search-up
+        bindkey '^[OA' history-substring-search-up
+        bindkey '^[[B' history-substring-search-down
+        bindkey '^[OB' history-substring-search-down
+        bindkey -M vicmd '^[[A' history-substring-search-up
+        bindkey -M vicmd '^[OA' history-substring-search-up
+        bindkey -M vicmd '^[[B' history-substring-search-down
+        bindkey -M vicmd '^[OB' history-substring-search-down
+        bindkey -M viins '^[[A' history-substring-search-up
+        bindkey -M viins '^[OA' history-substring-search-up
+        bindkey -M viins '^[[B' history-substring-search-down
+        bindkey -M viins '^[OB' history-substring-search-down
+
         # Remind you of aliases
         source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
       '';
