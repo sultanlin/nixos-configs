@@ -135,7 +135,9 @@
         nvim-autopairs
         # guess-indent-nvim
         vim-sleuth
+
         hardtime-nvim
+        nui-nvim
 
         #-- Future plugins
         # eyeliner-nvim
