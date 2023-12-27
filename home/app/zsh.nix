@@ -91,6 +91,7 @@
         zstyle ':completion:*' list-colors "''${(s.:.)--color=auto}"                        # Colored completion (different colors for dirs/files/etc)
         zstyle ':completion:*' rehash true                                                # automatically find new executables in path
         zstyle ':completion:*' menu select                                                # Highlight menu selection
+        zstyle ':completion:*' ignored-patterns '*.lock'
 
         # completion
         zstyle :compinstall ~/.config/zsh/.zshrc
