@@ -99,8 +99,8 @@
                 #
                 # Basic auto/tab complete:
                 autoload -U compinit
-                ignored-patterns 'flake.lock'
-                single-ignored show # didn't work
+                # ignored-patterns 'flake.lock'
+                # single-ignored show # didn't work
                 zmodload zsh/complist
                 compinit
                 _comp_options+=(globdots)		# Include hidden files.
