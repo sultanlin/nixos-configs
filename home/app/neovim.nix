@@ -112,6 +112,7 @@
         neodev-nvim # Additional lua config
         conform-nvim # Formatter
         nvim-lint
+        none-ls-nvim
 
         nvim-autopairs
         which-key-nvim
