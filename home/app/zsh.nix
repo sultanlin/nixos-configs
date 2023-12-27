@@ -81,12 +81,12 @@
       '';
 
       completionInit = ''
-                # colours
-                autoload -U colors && colors	      # colours
-                autoload -U compinit && compinit    # basic completion
-                autoload -U compinit colors zcalc   # theming
+        # colours
+        autoload -U colors && colors	      # colours
+        autoload -U compinit && compinit    # basic completion
+        autoload -U compinit colors zcalc   # theming
 
-                # tab completion
+        # tab completion
         zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' # Case insensitive tab completion
         zstyle ':completion:*' list-colors "''${(s.:.)--color=auto}"                        # Colored completion (different colors for dirs/files/etc)
         zstyle ':completion:*' rehash true                                                # automatically find new executables in path
@@ -96,14 +96,12 @@
         # completion
         zstyle :compinstall ~/.config/zsh/.zshrc
 
-                #
-                # Basic auto/tab complete:
-                autoload -U compinit
-                # ignored-patterns 'flake.lock'
-                # single-ignored show # didn't work
-                zmodload zsh/complist
-                compinit
-                _comp_options+=(globdots)		# Include hidden files.
+        #
+        # Basic auto/tab complete:
+        autoload -U compinit
+        zmodload zsh/complist
+        compinit
+        _comp_options+=(globdots)		# Include hidden files.
       '';
     };
   };
