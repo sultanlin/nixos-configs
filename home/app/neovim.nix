@@ -233,7 +233,7 @@
     prettierd
 
     #-- Go
-    go
+    # go
     gomodifytags
     iferr # generate error handling code for go
     impl # generate function implementation for go
