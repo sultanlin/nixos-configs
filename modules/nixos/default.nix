@@ -14,7 +14,7 @@
     #../nfs-mount.nix
     ./shellscripts.nix
     ./nginx.nix
-    ../../overlays
+    # ../../overlays
   ];
   # nixpkgs.overlays = import ../../overlays args;
 }
