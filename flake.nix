@@ -26,6 +26,7 @@
       nixos-modules = [
         ./hosts/vm
         ./modules/hyprland.nix
+        ./overlays
       ];
       home-module = import ./home;
     };
@@ -69,7 +70,7 @@
   in {
     nixosConfigurations = let
       base_args = {
-        inherit home-manager;
+        inherit home-manager inputs;
         nixpkgs = nixpkgs-unstable;
         system = x64_system;
         specialArgs = x64_specialArgs;

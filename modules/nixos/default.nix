@@ -10,5 +10,5 @@
     ./shellscripts.nix
     ./nginx.nix
   ];
-  nixpkgs.overlays = import ../../overlays;
+  # nixpkgs.overlays = import ../../overlays;
 }
