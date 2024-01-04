@@ -29,7 +29,7 @@ in
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.extraSpecialArgs = [specialArgs inputs];
+          home-manager.extraSpecialArgs = specialArgs;
           home-manager.users."${username}" = home-module;
         }
       ];
