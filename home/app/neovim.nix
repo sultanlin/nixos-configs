@@ -2,6 +2,7 @@
   pkgs,
   config,
   inputs,
+  specialArgs,
   ...
 }: {
   nixpkgs.config = {
@@ -22,7 +23,7 @@
           // {
             own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
               name = "sentiment";
-              src = inputs.sentiment-nvim;
+              src = specialArgs.inputs.sentiment-nvim;
             };
           };
       })
