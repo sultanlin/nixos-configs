@@ -69,7 +69,7 @@
   in {
     nixosConfigurations = let
       base_args = {
-        inherit home-manager inputs;
+        inherit home-manager;
         nixpkgs = nixpkgs-unstable;
         system = x64_system;
         specialArgs = x64_specialArgs;
