@@ -16,23 +16,37 @@
 
   nixpkgs = {
     overlays = [
-      (
-        final: prev: let
-          simplePlugin = input: name:
-            prev.vimUtils.buildVimPlugin {
-              inherit name;
-              src = input;
+      (final: prev: {
+        vimPlugins =
+          prev.vimPlugins
+          // {
+            own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
+              name = "sentiment.nvim";
+              src = inputs.sentiment-nvim;
             };
-        in {
-          vimPlugins =
-            prev.vimPlugins
-            // {
-              sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment-nvim";
-            };
-        }
-      )
+          };
+      })
     ];
   };
+  # nixpkgs = {
+  #   overlays = [
+  #     (
+  #       final: prev: let
+  #         simplePlugin = input: name:
+  #           prev.vimUtils.buildVimPlugin {
+  #             inherit name;
+  #             src = input;
+  #           };
+  #       in {
+  #         vimPlugins =
+  #           prev.vimPlugins
+  #           // {
+  #             sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
+  #           };
+  #       }
+  #     )
+  #   ];
+  # };
   #home.sessionVariables = {
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
@@ -133,7 +147,7 @@
         vim-fugitive
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
-        sentiment-nvim
+        own-sentiment-nvim
 
         #  {
         # error: Failed assertions:
