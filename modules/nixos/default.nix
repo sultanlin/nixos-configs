@@ -1,4 +1,4 @@
-{...}: {
+{...} @ args: {
   imports = [
     ./fhs-fonts.nix
     ./user-group.nix
@@ -11,5 +11,5 @@
     ./nginx.nix
     ../../overlays
   ];
-  # nixpkgs.overlays = import ../../overlays;
+  nixpkgs.overlays = import ../../overlays args;
 }

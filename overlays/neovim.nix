@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   nixpkgs = {
     overlays = [
       (final: prev: {
