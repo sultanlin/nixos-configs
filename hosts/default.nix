@@ -5,7 +5,7 @@
   specialArgs,
   nixos-modules,
   home-module,
-  inputs,
+  # inputs,
   ...
 }: let
   username = specialArgs.username;
