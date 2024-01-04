@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{sentiment-nvim, ...}: {
   nixpkgs = {
     overlays = [
       (final: prev: {
@@ -7,7 +7,7 @@
           // {
             own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
               name = "sentiment.nvim";
-              src = inputs.sentiment-nvim;
+              src = sentiment-nvim;
             };
           };
       })
