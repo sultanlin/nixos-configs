@@ -35,6 +35,15 @@
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
 
+  overlays.default = final: prev: {
+    vimPlugins = {
+      sentiment-nvim = prev.pkgs.vimUtils.buildVimPlugin {
+        name = "sentiment-nvim";
+        src = inputs.sentiment-nvim;
+      };
+    };
+  };
+
   programs = {
     neovim = let
       toLua = str: "lua << EOF\n${str}\nEOF\n";
@@ -122,6 +131,7 @@
         vim-fugitive
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
+        sentiment-nvim
 
         #  {
         # error: Failed assertions:

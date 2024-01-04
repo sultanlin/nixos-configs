@@ -169,10 +169,10 @@
 
       #------ Review later
       # https://github.com/virchau13/dots/blob/9eec548da8e72c5f2b41cdeb40e983dcc91aefd1/apps/nvim/default.nix#L7
-      # sentiment-nvim = {
-      #   url = "github:utilyre/sentiment.nvim";
-      #   flake = false;
-      # };
+      sentiment-nvim = {
+        url = "github:utilyre/sentiment.nvim";
+        flake = false;
+      };
       # nix-gaming.url = github:fufexan/nix-gaming;
       # flake-utils.url = github:numtide/flake-utils;
       # # eww = {
