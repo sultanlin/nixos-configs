@@ -57,7 +57,7 @@
 
     x64_specialArgs =
       {
-        inherit username userfullname useremail hostname dotfilesConfig inputs;
+        inherit username userfullname useremail hostname dotfilesConfig;
         # use unstable branch for some packages to get the latest updates
         pkgs-stable = import nixpkgs-stable {
           system = x64_system; # refer the `system` parameter form outer scope recursively
@@ -72,7 +72,7 @@
         inherit home-manager;
         nixpkgs = nixpkgs-unstable;
         system = x64_system;
-        specialArgs = x64_specialArgs;
+        specialArgs = x64_specialArgs // inputs;
       };
     in {
       # vm with hyprland compositor
