@@ -21,7 +21,7 @@
           prev.vimPlugins
           // {
             own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
-              name = "sentiment.nvim";
+              name = "sentiment";
               src = inputs.sentiment-nvim;
             };
           };
