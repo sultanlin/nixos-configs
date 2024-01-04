@@ -16,5 +16,5 @@
     ./nginx.nix
     # ../../overlays
   ];
-  # nixpkgs.overlays = import ../../overlays args;
+  nixpkgs.overlays = import ../../overlays args;
 }
