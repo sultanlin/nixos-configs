@@ -14,23 +14,25 @@
     };
   };
 
-  nixpkgs.overlays = [
-    (
-      final: prev: let
-        simplePlugin = input: name:
-          prev.vimUtils.buildVimPlugin {
-            inherit name;
-            src = input;
-          };
-      in {
-        vimPlugins =
-          prev.vimPlugins
-          // {
-            sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment-nvim";
-          };
-      }
-    )
-  ];
+  nixpkgs = {
+    overlays = [
+      (
+        final: prev: let
+          simplePlugin = input: name:
+            prev.vimUtils.buildVimPlugin {
+              inherit name;
+              src = input;
+            };
+        in {
+          vimPlugins =
+            prev.vimPlugins
+            // {
+              sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment-nvim";
+            };
+        }
+      )
+    ];
+  };
   #home.sessionVariables = {
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
