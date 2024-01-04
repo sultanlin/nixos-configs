@@ -1,6 +1,13 @@
-{ nixpkgs, home-manager, system, specialArgs, nixos-modules, home-module, ...}: 
-
-let
+{
+  nixpkgs,
+  home-manager,
+  system,
+  specialArgs,
+  nixos-modules,
+  home-module,
+  inputs,
+  ...
+}: let
   username = specialArgs.username;
 in
   nixpkgs.lib.nixosSystem {
@@ -22,7 +29,7 @@ in
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.extraSpecialArgs = [specialArgs inputs];
           home-manager.users."${username}" = home-module;
         }
       ];
