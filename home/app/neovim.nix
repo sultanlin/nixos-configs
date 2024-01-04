@@ -1,5 +1,6 @@
 {
   pkgs,
+  sentiment-nvim,
   config,
   # inputs,
   ...
@@ -14,20 +15,20 @@
     };
   };
 
-  # nixpkgs = {
-  #   overlays = [
-  #     (final: prev: {
-  #       vimPlugins =
-  #         prev.vimPlugins
-  #         // {
-  #           own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
-  #             name = "sentiment.nvim";
-  #             src = inputs.sentiment-nvim;
-  #           };
-  #         };
-  #     })
-  #   ];
-  # };
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        vimPlugins =
+          prev.vimPlugins
+          // {
+            own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
+              name = "sentiment.nvim";
+              src = sentiment-nvim;
+            };
+          };
+      })
+    ];
+  };
   # nixpkgs = {
   #   overlays = [
   #     (

@@ -7,6 +7,7 @@
     nixpkgs-stable,
     home-manager,
     nixos-wsl,
+    sentiment-nvim,
     ...
   }:
   # Function telling flake which inputs to use
