@@ -1,10 +1,4 @@
-{
-  pkgs,
-  sentiment-nvim,
-  config,
-  # inputs,
-  ...
-}: {
+{pkgs, ...}: {
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -15,51 +9,9 @@
     };
   };
 
-  # nixpkgs = {
-  #   overlays = [
-  #     (final: prev: {
-  #       vimPlugins =
-  #         prev.vimPlugins
-  #         // {
-  #           own-sentiment-nvim = prev.vimUtils.buildVimPlugin {
-  #             name = "sentiment.nvim";
-  #             src = sentiment-nvim;
-  #           };
-  #         };
-  #     })
-  #   ];
-  # };
-  # nixpkgs = {
-  #   overlays = [
-  #     (
-  #       final: prev: let
-  #         simplePlugin = input: name:
-  #           prev.vimUtils.buildVimPlugin {
-  #             inherit name;
-  #             src = input;
-  #           };
-  #       in {
-  #         vimPlugins =
-  #           prev.vimPlugins
-  #           // {
-  #             sentiment-nvim = simplePlugin inputs.sentiment-nvim "sentiment.nvim";
-  #           };
-  #       }
-  #     )
-  #   ];
-  # };
   #home.sessionVariables = {
   #  EDITOR = "${config.home.profileDirectory}/bin/nvim";
   #};
-
-  # nixpkgs.overlays = final: prev: {
-  #   vimPlugins = {
-  #     sentiment-nvim = prev.pkgs.vimUtils.buildVimPlugin {
-  #       name = "sentiment-nvim";
-  #       src = inputs.sentiment-nvim;
-  #     };
-  #   };
-  # };
 
   programs = {
     neovim = let
