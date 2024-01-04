@@ -5,13 +5,14 @@
   specialArgs,
   nixos-modules,
   home-module,
-  # inputs,
+  inputs,
   ...
 }: let
   username = specialArgs.username;
+  # specialAr
 in
   nixpkgs.lib.nixosSystem {
-    inherit system specialArgs;
+    inherit system specialArgs inputs;
     modules =
       nixos-modules
       ++ [
