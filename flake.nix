@@ -26,7 +26,7 @@
       nixos-modules = [
         ./hosts/vm
         ./modules/hyprland.nix
-        ./overlays
+        # ./overlays
       ];
       home-module = import ./home;
     };
