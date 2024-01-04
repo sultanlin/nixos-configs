@@ -69,10 +69,10 @@
   in {
     nixosConfigurations = let
       base_args = {
-        inherit home-manager;
+        inherit home-manager inputs;
         nixpkgs = nixpkgs-unstable;
         system = x64_system;
-        specialArgs = x64_specialArgs // inputs;
+        specialArgs = x64_specialArgs;
       };
     in {
       # vm with hyprland compositor
