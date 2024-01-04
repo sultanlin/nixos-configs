@@ -630,7 +630,24 @@
         "nixos-wsl": "nixos-wsl",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "nixpkgs-wayland": "nixpkgs-wayland"
+        "nixpkgs-wayland": "nixpkgs-wayland",
+        "sentiment-nvim": "sentiment-nvim"
+      }
+    },
+    "sentiment-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685109400,
+        "narHash": "sha256-0ZpqlaCIfFrcfxdp/9BVXYvwgBXsqazo0isrsYfUYyQ=",
+        "owner": "utilyre",
+        "repo": "sentiment.nvim",
+        "rev": "ecde8d877881bb78fdb90060c0991e76770dbdbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "utilyre",
+        "repo": "sentiment.nvim",
+        "type": "github"
       }
     },
     "systems": {

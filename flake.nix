@@ -57,7 +57,7 @@
 
     x64_specialArgs =
       {
-        inherit username userfullname useremail hostname dotfilesConfig;
+        inherit username userfullname useremail hostname dotfilesConfig inputs;
         # use unstable branch for some packages to get the latest updates
         pkgs-stable = import nixpkgs-stable {
           system = x64_system; # refer the `system` parameter form outer scope recursively
@@ -69,7 +69,7 @@
   in {
     nixosConfigurations = let
       base_args = {
-        inherit home-manager inputs;
+        inherit home-manager;
         nixpkgs = nixpkgs-unstable;
         system = x64_system;
         specialArgs = x64_specialArgs;
