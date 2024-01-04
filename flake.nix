@@ -31,14 +31,14 @@
       home-module = import ./home;
     };
 
-    wsl_modules = {
-      nixos-modules = [
-        nixos-wsl.nixosModules.wsl
-        ./hosts/wsl
-        # ./modules/hyprland.nix
-      ];
-      home-module = import ./home;
-    };
+    # wsl_modules = {
+    #   nixos-modules = [
+    #     nixos-wsl.nixosModules.wsl
+    #     ./hosts/wsl
+    #     # ./modules/hyprland.nix
+    #   ];
+    #   home-module = import ./home;
+    # };
 
     desktop_modules = {
       nixos-modules = [
@@ -79,8 +79,8 @@
       # vm with hyprland compositor
       vm = nixosSystem (vm_modules // base_args);
 
-      # wsl with hyprland compositor
-      wsl = nixosSystem (wsl_modules // base_args);
+      # # wsl with hyprland compositor
+      # wsl = nixosSystem (wsl_modules // base_args);
 
       # desktop with hyprland compositor
       #desktop = nixosSystem (desktop_modules // base_args);
