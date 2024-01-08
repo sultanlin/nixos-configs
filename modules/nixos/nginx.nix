@@ -37,5 +37,5 @@
   #   # want ssl + a let's encrypt certificate? add `forceSSL = true;` right here
   # };
 
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [80 443 3333];
 }
