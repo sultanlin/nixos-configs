@@ -27,6 +27,7 @@ in {
     ./tmux.nix
     ./zsh.nix
     ./direnv.nix
+    ./browser
     ./shell/eza.nix
   ];
 
