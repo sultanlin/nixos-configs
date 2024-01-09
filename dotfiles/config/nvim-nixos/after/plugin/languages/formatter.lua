@@ -29,7 +29,6 @@ conform.setup({
 		graphql = { { "prettierd", "prettier" } },
 
 		-- cs = { "csharpier" },
-		-- html = { "prettier" },
 		-- markdown = { "mdformat" },
 		-- xml = { "xmlformat" },
 		-- yaml = { "yamlfix" },
@@ -46,3 +45,10 @@ conform.setup({
 		})
 	end, { desc = "Format file or range (in visual mode)" }),
 })
+
+-- conform.formatters.prettierd = {
+-- 	prepend_args = { "html-whitespace-sensitivity", "ignore" },
+-- 	-- env = {
+-- 	-- 	htmlWhitespaceSensitivity = "ignore",
+-- 	-- },
+-- }

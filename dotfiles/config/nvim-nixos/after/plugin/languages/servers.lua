@@ -2,13 +2,12 @@ local runtime_path = vim.split(package.path, ";")
 local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
 local servers = {
 	-- clangd = {},
-	gopls = {},
+	gopls = { cmd = { "gopls" } },
 	ruff_lsp = {},
 	-- -- rust_analyser = {},
-	-- tsserver = {},
-	-- html = {
-	-- 	filetypes = { "html", "twig", "hbs" },
-	-- },
+	html = {
+		filetypes = { "html", "twig", "hbs" },
+	},
 	lua_ls = {
 		Lua = {
 			runtime = {
@@ -38,10 +37,11 @@ local servers = {
 		-- enable_import_completion = true,   -- Can have negative impact on completion responsiveness
 		organize_imports_on_format = false,
 	},
-	-- tsserver = {},
+	tsserver = {},
 	-- html = {},
-	-- cssls = {},
-	-- tailwindcss = {},
+	cssls = {},
+	tailwindcss = {},
+	eslint = {},
 	-- svelte = {},
 	-- graphql = {},
 	-- prismals = {},
@@ -94,6 +94,21 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+-- Testing
+vim.diagnostic.config({
+	underline = true,
+	update_in_insert = false,
+	virtual_text = {
+		spacing = 4,
+		source = "if_many",
+		prefix = "●",
+		-- this will set set the prefix to a function that returns the diagnostics icon based on the severity
+		-- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
+		-- prefix = "icons",
+	},
+	severity_sort = true,
+})
 
 local lspconfig = require("lspconfig")
 -- Set up each server using the common configuration options

@@ -12,3 +12,13 @@ vim tips
 -- https://www.youtube.com/watch?v=wlR5gYd6um0
 -- https://benmccormick.org/2014/07/02/062700.html
 -- https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
+
+neovim setup
+
+- youtube
+  -- https://www.youtube.com/watch?v=rUvjkBuKua4
+  -- https://www.youtube.com/watch?v=ZjMzBd1Dqz8
+
+- github
+  -- https://github.com/Alexis12119/nvim-config/tree/main
+  -- https://github.com/ecosse3/nvim

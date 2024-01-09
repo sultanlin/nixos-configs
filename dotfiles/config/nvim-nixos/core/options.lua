@@ -10,6 +10,7 @@ local options = {
 	smarttab = true, --- Makes tabbing smarter will realize you have 2 vs 4
 	softtabstop = 2, --- Insert 2 spaces for a tab
 	wrap = true, -- new line when characters go out of screen
+	-- spell = true,
 	expandtab = true, -- convert tabs to spaces
 	shiftround = true, -- Round indent
 	shiftwidth = 2, -- indent when using >> or <<
