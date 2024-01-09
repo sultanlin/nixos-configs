@@ -27,12 +27,13 @@
       device = "/dev/nvme0n1";
       configurationLimit = 10; # lib.mkDefault 10;
       useOSProber = true;
+      efiSupport = true;
     };
     timeout = 1;
     # UEFI settings
-    # efi = {
-    #     canTouchEfiVariables = true;
-    #     efiSysMountPoint = "/boot";
-    #   }
+     efi = {
+         canTouchEfiVariables = true;
+         efiSysMountPoint = "/boot";
+       }
   };
 }
