@@ -31,9 +31,9 @@
     };
     timeout = 1;
     # UEFI settings
-     efi = {
-         canTouchEfiVariables = true;
-         efiSysMountPoint = "/boot/efi";
-       };
+#     efi = {
+#         canTouchEfiVariables = true;
+#         efiSysMountPoint = "/boot/efi";
+#       };
   };
 }
