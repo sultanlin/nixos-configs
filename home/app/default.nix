@@ -54,6 +54,8 @@ in {
 
     # On screen keyboard
     wvkbd
+
+    plex-media-player
   ];
 
   home = {
