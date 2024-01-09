@@ -13,9 +13,9 @@
 
   home.packages = with pkgs; [
     firefox
-    chrome
+    google-chrome
     vivaldi
     brave
-    edge
+    microsoft-edge
   ];
 }
