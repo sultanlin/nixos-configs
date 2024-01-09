@@ -221,6 +221,7 @@
     gopls # go language server
     delve # go debugger
     golangci-lint
+    air # Live reloading for server hosting
 
     #-- C#
     omnisharp-roslyn
