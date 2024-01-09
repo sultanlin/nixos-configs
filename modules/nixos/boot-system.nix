@@ -21,21 +21,25 @@
   ];
 
   # Bootloader, grub vs systemd-boot. Grub better for dual booting
+  #
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader = lib.mkDefault {
-    grub = {
-      enable = true;
-      #device = "/dev/nvme0n1";
-      device = "nodev";
-      efiInstallAsRemovable = true;
-      configurationLimit = 10; # lib.mkDefault 10;
-      useOSProber = true;
-      efiSupport = true;
-    };
-    timeout = 1;
+    # grub = {
+    #   enable = true;
+    #   #device = "/dev/nvme0n1";
+    #   device = "nodev";
+    #   efiInstallAsRemovable = true;
+    #   configurationLimit = 10; # lib.mkDefault 10;
+    #   useOSProber = true;
+    #   efiSupport = true;
+    # };
+    # timeout = 1;
     # UEFI settings
-#     efi = {
-#         canTouchEfiVariables = true;
-#         efiSysMountPoint = "/boot/efi";
-#       };
+    #     efi = {
+    #         canTouchEfiVariables = true;
+    #         efiSysMountPoint = "/boot/efi";
+    #       };
   };
 }

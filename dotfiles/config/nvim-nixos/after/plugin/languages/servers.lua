@@ -1,5 +1,5 @@
 local runtime_path = vim.split(package.path, ";")
-local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
+-- local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
 local servers = {
 	-- clangd = {},
 	gopls = { cmd = { "gopls" } },
