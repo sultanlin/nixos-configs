@@ -87,7 +87,7 @@
       #desktop = nixosSystem (desktop_modules // base_args);
 
       # laptop with hyprland compositor
-      #laptop = nixosSystem (laptop_modules // base_args);
+      laptop = nixosSystem (laptop_modules // base_args);
     };
   };
 
