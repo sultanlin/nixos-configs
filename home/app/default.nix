@@ -68,5 +68,9 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
+    file.".config/hypr" = {
+      source = "${config_sym_dir}/hypr";
+      recursive = true;
+    };
   };
 }
