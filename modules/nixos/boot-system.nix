@@ -33,7 +33,7 @@
     # UEFI settings
      efi = {
          canTouchEfiVariables = true;
-         efiSysMountPoint = "/boot";
+         efiSysMountPoint = "/boot/efi";
        };
   };
 }
