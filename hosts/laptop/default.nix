@@ -10,7 +10,7 @@
     #../../modules/user-group.nix
     #../../modules/fhs-fonts.nix
     #../cifs-mount.nix
-    ../nfs-mount.nix
+    # ../nfs-mount.nix
   ];
 
   environment = {
