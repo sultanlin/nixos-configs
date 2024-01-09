@@ -40,13 +40,13 @@
         defaultSession = "hyprland";
         lightdm.enable = false;
         gdm = {
-          enable = false;
+          enable = true;
           wayland = true;
         };
       };
     };
     greetd = {
-      enable = true;
+      enable = false;
       settings = {
         default_session = {
           # Wayland Desktop Manager is installed only for user ryan via home-manager!
