@@ -24,7 +24,8 @@
   boot.loader = lib.mkDefault {
     grub = {
       enable = true;
-      device = "/dev/nvme0n1";
+      #device = "/dev/nvme0n1";
+      device = "nodev";
       configurationLimit = 10; # lib.mkDefault 10;
       useOSProber = true;
       efiSupport = true;
