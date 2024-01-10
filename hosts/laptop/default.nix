@@ -18,6 +18,7 @@
       # System Wide Packages
       hello # Test Package
       steam-run
+      radeontop
     ];
   };
   programs.steam = {
