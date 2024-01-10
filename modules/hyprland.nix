@@ -31,6 +31,7 @@
     tumbler.enable = true; # Thumbnail support for images
     xserver = {
       enable = true;
+      videoDrivers = ["amdgpu"];
 
       desktopManager = {
         xterm.enable = false;
