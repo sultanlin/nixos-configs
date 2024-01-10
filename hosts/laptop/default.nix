@@ -17,6 +17,7 @@
     systemPackages = with pkgs; [
       # System Wide Packages
       hello # Test Package
+      steam-run
     ];
   };
   programs.steam = {
