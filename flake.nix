@@ -8,6 +8,7 @@
     home-manager,
     nixos-wsl,
     sentiment-nvim,
+    hyprland,
     ...
   }:
   # Function telling flake which inputs to use
