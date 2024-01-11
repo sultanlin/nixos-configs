@@ -64,14 +64,14 @@
   programs = {
     hyprland = {
       enable = true;
-      package = hyprland.packages.${pkgs.system}.hyprland;
+      # package = hyprland.packages.${pkgs.system}.hyprland;
 
       xwayland = {
         enable = true;
         # hidpi = true;
       };
 
-      enableNvidiaPatches = true;
+      # enableNvidiaPatches = true;
     };
 
     # monitor backlight control
