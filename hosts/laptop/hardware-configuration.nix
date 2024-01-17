@@ -12,10 +12,34 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
+  # Bootloader, grub vs systemd-boot. Grub better for dual booting
+  #
+  boot.loader = {
+    # Use the EFI boot loader.
+    efi.canTouchEfiVariables = true;
+    # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
+    efi.efiSysMountPoint = "/boot";
+    systemd-boot.enable = true;
+  };
+
+  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" "usbhid" "ahci"];
   boot.initrd.kernelModules = ["amdgpu"];
   boot.kernelModules = ["kvm-amd"];
+  # boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
   boot.extraModulePackages = [];
+
+  # supported file systems, so we can mount any removable disks with these filesystems
+  boot.supportedFilesystems = [
+    "ext4"
+    "btrfs"
+    "xfs"
+    #"zfs"
+    "ntfs"
+    "fat"
+    "vfat"
+    "exfat"
+    "cifs" # mount windows share
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/a5329769-587b-4fc4-b545-bb9b8a1d6dc9";
@@ -39,5 +63,6 @@
   # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  # powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
