@@ -29,6 +29,7 @@ in {
     ./direnv.nix
     ./browser
     ./shell/eza.nix
+    ./hyprland.nix
   ];
 
   home.packages = with pkgs; [
