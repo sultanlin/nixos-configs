@@ -38,7 +38,7 @@
       };
 
       displayManager = {
-        # defaultSession = "hyprland";
+        defaultSession = "hyprland";
         lightdm.enable = false;
         gdm = {
           enable = true;
@@ -62,18 +62,18 @@
   };
 
   programs = {
-    # hyprland = {
-    #   enable = true;
-    #   # package = hyprland.packages.${pkgs.system}.hyprland;
-    #
-    #   xwayland = {
-    #     enable = true;
-    #     # hidpi = true;
-    #   };
-    #
-    #   # enableNvidiaPatches = true;
-    # };
-    #
+    hyprland = {
+      enable = true;
+      # package = hyprland.packages.${pkgs.system}.hyprland;
+
+      xwayland = {
+        enable = true;
+        # hidpi = true;
+      };
+
+      # enableNvidiaPatches = true;
+    };
+
     # monitor backlight control
     light.enable = true;
 
