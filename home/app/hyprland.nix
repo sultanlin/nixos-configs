@@ -24,7 +24,7 @@
         "GDK_BACKEND,wayland"
       ];
     };
-    package = hyprland.packages.${pkgs.system}.hyprland;
+    # package = hyprland.packages.${pkgs.system}.hyprland;
     # extraConfig = builtins.readFile ../conf/hyprland.conf;
     # gammastep/wallpaper-switcher need this to be enabled.
     systemd.enable = true;
