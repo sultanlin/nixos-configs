@@ -95,7 +95,7 @@
     wl-clipboard # copying and pasting
     hyprpicker # color picker
 
-    wf-recorder # creen recording
+    wf-recorder # screen recording
     grim # taking screenshots
     slurp # selecting a region to screenshot
     # TODO replace by `flameshot gui --raw | wl-copy`
