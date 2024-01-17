@@ -32,10 +32,10 @@
 
   # NOTE: this executable is used by greetd to start a wayland session when system boot up
   # with such a vendor-no-locking script, we can switch to another wayland compositor without modifying greetd's config in NixOS module
-  home.file.".wayland-session" = {
-    source = "${pkgs.hyprland}/bin/Hyprland";
-    executable = true;
-  };
+  # home.file.".wayland-session" = {
+  #   source = "${pkgs.hyprland}/bin/Hyprland";
+  #   executable = true;
+  # };
 
   # # hyprland configs, based on https://github.com/notwidow/hyprland
   # xdg.configFile = {
