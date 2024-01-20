@@ -65,7 +65,7 @@ in {
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       source = "${config_sym_dir}/nvim-nixos";
       recursive = true;
-      # target = ".config/nvim";
+      target = ".config/nvim";
     };
     #file.".config/tmux" = {
     # source = "${config_sym_dir}/tmux";
