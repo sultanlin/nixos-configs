@@ -27,7 +27,9 @@ in {
     ./tmux.nix
     ./zsh.nix
     ./direnv.nix
+    ./browser
     ./shell/eza.nix
+    # ./hyprland.nix
   ];
 
   home.packages = with pkgs; [
@@ -53,6 +55,8 @@ in {
 
     # On screen keyboard
     wvkbd
+
+    plex-media-player
   ];
 
   home = {
@@ -61,11 +65,15 @@ in {
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       source = "${config_sym_dir}/nvim-nixos";
       recursive = true;
-      # target = ".config/nvim";
+      target = ".config/nvim";
     };
     #file.".config/tmux" = {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
+    file.".config/hypr" = {
+      source = "${config_sym_dir}/hypr";
+      recursive = true;
+    };
   };
 }

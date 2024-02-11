@@ -8,6 +8,7 @@
     home-manager,
     nixos-wsl,
     sentiment-nvim,
+    hyprland,
     ...
   }:
   # Function telling flake which inputs to use
@@ -15,6 +16,7 @@
     hostname = "vm"; #current system/profile
     username = "sultan";
     dotfilesConfig = "/home/sultan/nixos-config/dotfiles/config";
+
     userfullname = "Sultan Linjawi";
     useremail = "skorpion219@hotmail.co.uk";
 
@@ -87,7 +89,7 @@
       #desktop = nixosSystem (desktop_modules // base_args);
 
       # laptop with hyprland compositor
-      #laptop = nixosSystem (laptop_modules // base_args);
+      laptop = nixosSystem (laptop_modules // base_args);
     };
   };
 
@@ -196,10 +198,12 @@
     extra-substituters = [
       "https://nix-community.cachix.org"
       "https://nixpkgs-wayland.cachix.org"
+      "https://hyprland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 }
